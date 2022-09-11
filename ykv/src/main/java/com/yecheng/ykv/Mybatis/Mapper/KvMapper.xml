@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yecheng.ykv.Mybatis.Mapper.KvMapper">
+    <insert id="saveKv" parameterType="kv">
+        insert into Kv(dbkey, value, hash)
+        values(#{dbkey}, #{value}, #{hash})
+    </insert>
+    
+    <select id="getKv" parameterType="Integer" resultType="kv">
+        select id, dbkey, value ,hash
+        from Kv
+        where hash = #{hash}
+    </select>
+
+    <update id="updateKv" parameterType="kv">
+        update Kv
+        set value = #{value}, hash = #{hash}
+        where id = #{id}
+    </update>
+</mapper>
