@@ -102,7 +102,7 @@
 			</resource>
 		</resources>
 	</build>
-    <repositories>
+    <!--repositories>
 		<repository>
 		   <id>yecheng</id>
 		   <name>yecheng</name>
@@ -114,6 +114,6 @@
 			 <enabled>true</enabled>
 		   </snapshots>
 		</repository>
-	 </repositories>
+	 </repositories-->
 	
 </project>
