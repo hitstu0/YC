@@ -45,6 +45,12 @@ public class KvController {
     @ResponseBody
     public CodeMsg getValue(HttpServletRequest req, 
     @RequestParam(name = "key") String key, @RequestParam(name = "hash", required = false) Integer hash) {
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         logger.info("begin getvalue, key:{}", key);
         if (!userService.judgeUser(req)) {
             return CodeMsg.UserNotLogin;
