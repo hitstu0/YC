@@ -48,7 +48,7 @@ public class AdjustContainerNumsService {
 
             int result = Integer.parseInt(msg.getMsg());
             if (result == 0) {
-                logger.info("get avaliable port:{}", result);
+                logger.info("get avaliable port: {}", port);
                 return port;
             }
         }

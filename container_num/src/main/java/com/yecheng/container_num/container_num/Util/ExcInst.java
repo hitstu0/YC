@@ -14,7 +14,7 @@ public class ExcInst {
     private static Logger logger = LoggerFactory.getLogger(ExcInst.class);
 
     public static CodeMsg runShell(String[] command) {
-         logger.info("command is :{}", command[2]);
+         logger.info(command[2]);
 
          try {
             Process p = Runtime.getRuntime().exec(command);
