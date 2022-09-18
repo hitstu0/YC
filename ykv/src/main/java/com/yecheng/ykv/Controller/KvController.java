@@ -20,7 +20,7 @@ import com.yecheng.ykv.Service.KvService;
 import com.yecheng.ykv.Service.UserService;
 
 @Controller
-@RequestMapping("/yc_ykv")
+@RequestMapping("/ykv")
 public class KvController {
     Logger logger = LoggerFactory.getLogger(KvController.class);
 
