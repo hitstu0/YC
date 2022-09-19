@@ -17,15 +17,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.yecheng.ykv.Data.CodeMsg;
 import com.yecheng.ykv.Data.Kv;
 import com.yecheng.ykv.Service.KvService;
-import com.yecheng.ykv.Service.UserService;
+
 
 @Controller
 @RequestMapping("/ykv")
 public class KvController {
     Logger logger = LoggerFactory.getLogger(KvController.class);
-
-    @Autowired
-    private UserService userService;
 
     @Autowired
     private KvService kvService;
@@ -34,10 +31,7 @@ public class KvController {
     @ResponseBody
     public CodeMsg setKv(HttpServletRequest req, HttpServletResponse response, @RequestBody Kv kvData) {
         logger.info("begin set kv, key:{}, value:{}", kvData.getDbkey(), kvData.getValue());
-        if (!userService.judgeUser(req)) {
-            return CodeMsg.UserNotLogin;
-        }
-         
+
         return kvService.setKv(kvData, response);
     }
 
@@ -46,9 +40,6 @@ public class KvController {
     public CodeMsg getValue(HttpServletRequest req, 
     @RequestParam(name = "key") String key, @RequestParam(name = "hash", required = false) Integer hash) {
         logger.info("begin getvalue, key:{}", key);
-        if (!userService.judgeUser(req)) {
-            return CodeMsg.UserNotLogin;
-        }
 
         return kvService.getValue(key, hash);
     }
