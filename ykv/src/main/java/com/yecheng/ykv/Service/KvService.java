@@ -11,6 +11,7 @@ import com.alibaba.fastjson.JSON;
 import com.yecheng.ykv.Data.CodeMsg;
 import com.yecheng.ykv.Data.GetValueResponse;
 import com.yecheng.ykv.Data.Kv;
+import com.yecheng.ykv.Exception.MyException;
 import com.yecheng.ykv.Mybatis.Mapper.KvMapper;
 import com.yecheng.ykv.Mybatis.SqlSessionFactory.SqlSessionBuilder;
 import com.yecheng.ykv.Redis.JedisBuilder;
@@ -115,7 +116,7 @@ public class KvService {
         }
     }
 
-    private CodeMsg getKvFromDB(String key) {
+    private CodeMsg<GetValueResponse> getKvFromDB(String key) {
         int khash = key.hashCode();
 
         SqlSession sqlSession = null;
@@ -126,7 +127,7 @@ public class KvService {
             kv = mapper.getKv(khash);
         } catch (Exception e) {
             logger.error("get kv from data err:{}", e.getMessage());
-            return CodeMsg.InternError;
+            throw new MyException(CodeMsg.InternError);
         } finally {
             if (sqlSession != null) {
                 sqlSession.close();
@@ -135,7 +136,7 @@ public class KvService {
 
         if (kv == null) {
             logger.error("kv not exist, key is:{}", key);
-            return CodeMsg.KVNotEXist;
+            throw new MyException(CodeMsg.KVNotEXist);
         }
         
         GetValueResponse resp = new GetValueResponse();
@@ -143,6 +144,6 @@ public class KvService {
         resp.setHash(kv.getValue().hashCode());
         logger.info("get kv success from db, value:{}", kv.getValue());
         
-        return CodeMsg.SuccessWithData(JSON.toJSONString(resp));
+        return CodeMsg.SuccessWithData(resp);
     }
 }
