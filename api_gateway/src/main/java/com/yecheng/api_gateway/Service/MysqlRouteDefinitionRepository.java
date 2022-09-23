@@ -18,6 +18,7 @@ import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinitionRepository;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 import com.yecheng.api_gateway.Data.RouteDefinitionData;
@@ -29,6 +30,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component
+@DependsOn(value = {"SqlSessionBuilder"})
 public class MysqlRouteDefinitionRepository implements RouteDefinitionRepository, ApplicationEventPublisherAware{
     private static Logger logger = LoggerFactory.getLogger(MysqlRouteDefinitionRepository.class);
      
