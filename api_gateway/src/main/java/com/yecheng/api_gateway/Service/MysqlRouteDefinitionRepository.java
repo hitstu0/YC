@@ -43,7 +43,7 @@ public class MysqlRouteDefinitionRepository implements RouteDefinitionRepository
 
     @Override
     public Flux<RouteDefinition> getRouteDefinitions() {
-        logger.info("begin getRouteDefinitionFrom mysql, service name is: {}", serviceName);
+        logger.info("begin getRouteDefinition From mysql, service name is: {}", serviceName);
         
         List<RouteDefinitionData> datas = dbService.getRouteDefinitionDatas(serviceName);
         List<RouteDefinition> definitions = changeToRouteDefinition(datas);
