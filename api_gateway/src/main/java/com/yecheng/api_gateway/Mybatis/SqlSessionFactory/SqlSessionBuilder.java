@@ -27,6 +27,9 @@ SqlSessionBuilder {
 
 
     public void init() {
+        if(factory != null) {
+            return;
+        }
         logger.info("begin init mysql source");
         sqlSessionPool = new SqlSessionPool("mysql", "myDatas", "root", "123456yd", client);
         sqlSessionPool.initSqlSessionPool();

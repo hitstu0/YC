@@ -68,7 +68,7 @@ public class MysqlRouteDefinitionRepository implements RouteDefinitionRepository
             if (uri == null) return Collections.emptyList();
             
             definition.setUri(uri);
-            PredicateDefinition pre = new PredicateDefinition(data.getPath());
+            PredicateDefinition pre = new PredicateDefinition("Path=" + data.getPath());
             List<PredicateDefinition> pres = new ArrayList<PredicateDefinition>();
             pres.add(pre);
             definition.setPredicates(pres);
