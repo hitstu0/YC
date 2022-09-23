@@ -13,17 +13,19 @@ import com.yecheng.api_gateway.Data.RouteDefinitionData;
 import com.yecheng.ymysql.DataSource.SqlSessionPool;
 
 @Component
-public class SqlSessionBuilder implements CommandLineRunner{
+public class 
+SqlSessionBuilder {
     private Logger logger = org.slf4j.LoggerFactory.getLogger(SqlSessionBuilder.class);
 
     @Autowired
     private DiscoveryClient client;
+
     private SqlSessionPool sqlSessionPool;
 
     private SqlSessionFactory factory;
 
-    @Override
-    public void run(String... args) throws Exception {
+
+    public void init() {
         logger.info("begin init mysql source");
         sqlSessionPool = new SqlSessionPool("mysql", "myDatas", "root", "123456yd", client);
         sqlSessionPool.initSqlSessionPool();

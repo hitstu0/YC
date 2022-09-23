@@ -30,7 +30,6 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component
-@DependsOn(value = {"SqlSessionBuilder"})
 public class MysqlRouteDefinitionRepository implements RouteDefinitionRepository, ApplicationEventPublisherAware{
     private static Logger logger = LoggerFactory.getLogger(MysqlRouteDefinitionRepository.class);
      

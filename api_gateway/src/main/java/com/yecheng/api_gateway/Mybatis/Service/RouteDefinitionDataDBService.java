@@ -17,6 +17,7 @@ public class RouteDefinitionDataDBService {
     private SqlSessionBuilder sqlSessionBuilder;
     
     public List<RouteDefinitionData> getRouteDefinitionDatas(String serviceName) {
+        sqlSessionBuilder.init();
         SqlSession sqlSession =  null;
         try {
             //初始化mapper
