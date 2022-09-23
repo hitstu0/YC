@@ -10,6 +10,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Component;
 
 import com.yecheng.api_gateway.Data.RouteDefinitionData;
+import com.yecheng.api_gateway.Mybatis.Mapper.RouteDefinitionMapper;
 import com.yecheng.ymysql.DataSource.SqlSessionPool;
 
 @Component
@@ -37,7 +38,7 @@ SqlSessionBuilder {
     }
 
     private void addMapper() {
-        sqlSessionPool.addMapper(RouteDefinitionData.class);
+        sqlSessionPool.addMapper(RouteDefinitionMapper.class);
     }
 
     private void addAlias() {
