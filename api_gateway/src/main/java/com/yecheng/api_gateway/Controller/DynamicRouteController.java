@@ -20,6 +20,7 @@ public class DynamicRouteController {
     @GetMapping
     @ResponseBody
     public CodeMsg refreshRouteDefinition() {
+        repository.load();
         repository.refreshRoutes();
 
         return CodeMsg.Success;

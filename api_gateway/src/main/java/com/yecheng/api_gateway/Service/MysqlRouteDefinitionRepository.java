@@ -7,6 +7,8 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +21,7 @@ import org.springframework.cloud.gateway.route.RouteDefinitionRepository;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 import com.yecheng.api_gateway.Data.RouteDefinitionData;
@@ -30,12 +33,16 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component
-public class MysqlRouteDefinitionRepository implements RouteDefinitionRepository, ApplicationEventPublisherAware{
+public class MysqlRouteDefinitionRepository implements RouteDefinitionRepository, ApplicationEventPublisherAware {
     private static Logger logger = LoggerFactory.getLogger(MysqlRouteDefinitionRepository.class);
-     
+    
+    //网关对应服务
     @Value("${service_name}")
     private String serviceName;
+    //该服务的路由路径
+    private List<RouteDefinition> routeDefinitionList = new LinkedList<>();
     
+    //工具类
     @Autowired
     private RouteDefinitionDataDBService dbService;
 
@@ -43,42 +50,8 @@ public class MysqlRouteDefinitionRepository implements RouteDefinitionRepository
 
     @Override
     public Flux<RouteDefinition> getRouteDefinitions() {
-        logger.info("begin getRouteDefinition From mysql, service name is: {}", serviceName);
-        
-        List<RouteDefinitionData> datas = dbService.getRouteDefinitionDatas(serviceName);
-        List<RouteDefinition> definitions = changeToRouteDefinition(datas);
-
-        return Flux.fromIterable(definitions);
-
+        return Flux.fromIterable(routeDefinitionList);
     } 
-    
-    private List<RouteDefinition> changeToRouteDefinition( List<RouteDefinitionData> datas) {
-        List<RouteDefinition> definitions = new LinkedList<>();
-        for(RouteDefinitionData data : datas) {
-            logger.info("begin create RouteDefinition, serviceName:{}, path:{}", serviceName, data.getPath());
-            
-            RouteDefinition definition = new RouteDefinition();
-            
-            URI uri = null;
-            try {
-                uri = new URI("lb://" + serviceName);
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-            }
-            if (uri == null) return Collections.emptyList();
-            
-            definition.setUri(uri);
-            PredicateDefinition pre = new PredicateDefinition("Path=" + data.getPath());
-            List<PredicateDefinition> pres = new ArrayList<PredicateDefinition>();
-            pres.add(pre);
-            definition.setPredicates(pres);
-
-            definitions.add(definition);
-        }
-
-        return definitions;
-    }
-    
 
     @Override
     public Mono<Void> save(Mono<RouteDefinition> route) {
@@ -94,8 +67,22 @@ public class MysqlRouteDefinitionRepository implements RouteDefinitionRepository
     public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
         this.publisher = applicationEventPublisher;
     }
-
+    
     public void refreshRoutes() {
         publisher.publishEvent(new RefreshRoutesEvent(this));
+    }
+
+    //加载 mysql 中的配置
+    @PostConstruct
+    public void init() {
+        load();
+    }
+
+    public void load() {
+        logger.info("begin getRouteDefinition From mysql, service name is: {}", serviceName);
+        
+        List<RouteDefinitionData> datas = dbService.getRouteDefinitionDatas(serviceName);
+        routeDefinitionList = dbService.changeToRouteDefinition(serviceName, datas);
+
     }
 }

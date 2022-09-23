@@ -14,8 +14,7 @@ import com.yecheng.api_gateway.Mybatis.Mapper.RouteDefinitionMapper;
 import com.yecheng.ymysql.DataSource.SqlSessionPool;
 
 @Component
-public class 
-SqlSessionBuilder {
+public class SqlSessionBuilder {
     private Logger logger = org.slf4j.LoggerFactory.getLogger(SqlSessionBuilder.class);
 
     @Autowired
@@ -34,7 +33,7 @@ SqlSessionBuilder {
         sqlSessionPool = new SqlSessionPool("mysql", "myDatas", "root", "123456yd", client);
         sqlSessionPool.initSqlSessionPool();
         
-        addAlias();
+        addAlias(); 
         addMapper();
 
         factory = sqlSessionPool.getSqlSessionFactory();
