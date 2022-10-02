@@ -51,6 +51,7 @@ public class FlowRouteService {
             sqlSession = sqlSessionBuilder.getSqlSession();
             FlowRouteMapper mapper = sqlSession.getMapper(FlowRouteMapper.class);
             mapper.deleteFlowRouteDefinitionFromService(service.hashCode());
+            sqlSession.commit();
         } finally {
             if (sqlSession != null) sqlSession.close();
         }
@@ -68,6 +69,7 @@ public class FlowRouteService {
             db.setServiceHash(service.hashCode());
             
             mapper.insertFlowRouteDefinition(db);
+            sqlSession.commit();
         } finally {
             if (sqlSession != null) sqlSession.close();
         }
