@@ -22,7 +22,7 @@ public class FlowRouteController {
     @Autowired
     private FlowRouteService flowRouteService;
     
-    @GetMapping
+    @GetMapping("/all")
     public CodeMsg<List<FlowRouteDefinition>> getAllFlowRouteDefinition() {
         return CodeMsg.SuccessWithData(flowRouteService.getAll());
     }
