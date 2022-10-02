@@ -19,7 +19,7 @@ public class DiscoverService {
         
         List<ServiceInstance> instances = discoveryClient.getInstances(name);
         logger.info("get service: {} number is {}", name, instances.size());
-
+         
         return instances;
     }
 }

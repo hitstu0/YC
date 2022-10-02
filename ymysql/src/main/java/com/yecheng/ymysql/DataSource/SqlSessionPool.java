@@ -5,6 +5,7 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
+import org.apache.ibatis.datasource.unpooled.UnpooledDataSource;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -27,8 +28,8 @@ public class SqlSessionPool {
     private String userName;
     private String password;
     private DiscoveryClient client;
-    
-    //连接信息
+    private boolean unpool;
+
     //连接信息
     private final String driver = "com.mysql.jdbc.Driver";
     private final String urlPre = "jdbc:mysql://";
@@ -49,6 +50,10 @@ public class SqlSessionPool {
         this.userName = user;
         this.password = pass;
         this.client = client;
+    }
+    
+    public void setUnPool(boolean unpool) {
+        this.unpool = unpool;
     }
 
     public int initSqlSessionPool() {
@@ -87,8 +92,10 @@ public class SqlSessionPool {
     private void initDataSource(String host, int port) {
         String url = urlPre + host + ":" + port + "/" + dataBase + urlPost;
         logger.info("datasource url is: {}", url);
-
-        dataSource = new PooledDataSource(driver, url, userName, password);
+        
+        if (!unpool) dataSource = new PooledDataSource(driver, url, userName, password);
+        else dataSource = new UnpooledDataSource(driver, url, userName, password);
+        
         //事物
         TransactionFactory transactionFactory = new JdbcTransactionFactory();
         //环境
