@@ -29,9 +29,9 @@ public class NginxConfigService {
     @Autowired
     private SqlSessionBuilder sqlSessionBuilder;
     
-    private static final String APIHost = "ApiHost";
-    private static final String APIPort = "ApiPort";
-    private static final String ServiceWeight = "ServiceWeight";
+    private static final String APIHost = "apihost";
+    private static final String APIPort = "apiport";
+    private static final String ServiceWeight = "weight";
 
     public CodeMsg<String> getAllUpstream(){
         logger.info("begin get all upstream");
