@@ -39,6 +39,7 @@ public class NginxConfigService {
         logger.info("begin get all upstream");
         //获取所有服务名和域名信息
         List<FlowRouteDefinition> services = getAllServiceInfo();
+        logger.info("detect service number is:{}", services.size());
 
         //保存所有生成的动态文件配置
         StringBuilder result = new StringBuilder();
@@ -60,6 +61,7 @@ public class NginxConfigService {
                 String port = map.get(APIPort);
                 String weight = map.get(ServiceWeight);
                 if(ip == null || port == null) {
+                   logger.error("service: {} tag do not contain ip or port");
                    throw new MyException(CodeMsg.InfoLack);
                 }
 
