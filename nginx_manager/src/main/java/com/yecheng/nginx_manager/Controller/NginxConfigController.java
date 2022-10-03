@@ -21,5 +21,5 @@ public class NginxConfigController {
     public CodeMsg<String> getAllUpstream() {
         return service.getAllDynamicConfig();
     }
-
+    
 }

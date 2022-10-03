@@ -15,6 +15,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
 
+import com.google.common.base.CaseFormat;
 import com.yecheng.nginx_manager.Data.CodeMsg;
 import com.yecheng.nginx_manager.Data.FlowRouteDefinition;
 import com.yecheng.nginx_manager.Data.UpstreamData;
@@ -92,7 +93,8 @@ public class NginxConfigService {
         builder.append("server_name " + host + ";\n");
 
         builder.append("location / {\n");
-        builder.append("proxy_pass http://" + serviceName + ";\n");
+        String cName = CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, serviceName);
+        builder.append("proxy_pass http://" + cName + ";\n");
 
         builder.append("}\n}\n");
 
@@ -101,7 +103,7 @@ public class NginxConfigService {
 
     private String getUpstreamFromServiceNameAndData(String serviceName, List<UpstreamData> list) {
         StringBuilder builder = new StringBuilder();
-        builder.append("upstream " + serviceName + "{\n");
+        builder.append("upstream " + serviceName + " {\n");
         for(UpstreamData data : list) {
             builder.append("server " + data.getIp() + ":" + data.getPort());
             if (data.getWeight() != null) {
