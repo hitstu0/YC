@@ -47,13 +47,15 @@ public class NginxConfigService {
         
         //对每一个服务，生成server块和upstream块
         for (FlowRouteDefinition service : services) {
-            String serviceName = CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, service.getService());
+            String serviceName = service.getService();
             String host = service.getHost();
             logger.info("begin init upstream and server, serviceName is:{}, host is:{}", serviceName, host);
             
             //生成upstream
             List<UpstreamData> upstreamDatas = new LinkedList<>();
             List<ServiceInstance> serviceLists = discoveryClient.getInstances(serviceName);
+            
+            serviceName = CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, service.getService());
             for (ServiceInstance instance : serviceLists) {
                 UpstreamData uData = new UpstreamData();
                 
