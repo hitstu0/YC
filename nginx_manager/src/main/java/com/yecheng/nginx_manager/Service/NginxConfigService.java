@@ -39,7 +39,7 @@ public class NginxConfigService {
         logger.info("begin get all upstream");
         //获取所有服务名和域名信息
         List<FlowRouteDefinition> services = getAllServiceInfo();
-        logger.info("detect service number is: {}", services.size());
+        logger.info("detect service number is:{}", services.size());
 
         //保存所有生成的动态文件配置
         StringBuilder result = new StringBuilder();
