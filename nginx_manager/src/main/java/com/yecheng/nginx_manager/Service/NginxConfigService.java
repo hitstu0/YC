@@ -1,8 +1,10 @@
 package com.yecheng.nginx_manager.Service;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.ibatis.session.SqlSession;
 import org.aspectj.apache.bcel.classfile.Code;
@@ -33,19 +35,22 @@ public class NginxConfigService {
     private static final String APIPort = "apiport";
     private static final String ServiceWeight = "weight";
 
-    public CodeMsg<String> getAllUpstream(){
+    public CodeMsg<String> getAllDynamicConfig(){
         logger.info("begin get all upstream");
-        //获取所有服务名
-        List<String> services = getAllServiceName();
+        //获取所有服务名和域名信息
+        List<FlowRouteDefinition> services = getAllServiceInfo();
 
-        //保存所有upstream字符串
+        //保存所有生成的动态文件配置
         StringBuilder result = new StringBuilder();
-
-        for (String serviceName : services) {
-            logger.info("begin init upstream, serviceName is:{}", serviceName);
-            //保存该服务所有upstream实例
+        
+        //对每一个服务，生成server块和upstream块
+        for (FlowRouteDefinition service : services) {
+            String serviceName = service.getService();
+            String host = service.getHost();
+            logger.info("begin init upstream and server, serviceName is:{}, host is:{}", serviceName, host);
+            
+            //生成upstream
             List<UpstreamData> upstreamDatas = new LinkedList<>();
-
             List<ServiceInstance> serviceLists = discoveryClient.getInstances(serviceName);
             for (ServiceInstance instance : serviceLists) {
                 UpstreamData uData = new UpstreamData();
@@ -60,19 +65,38 @@ public class NginxConfigService {
 
                 uData.setIp(ip);
                 uData.setPort(port);
-                uData.setWeight(weight);
+                uData.setWeight(weight); 
 
                 upstreamDatas.add(uData);
             }
 
             //根据 upstream信息生成字符串
-            String info = getUpstreamFromServiceNameAndData(serviceName, upstreamDatas);
-            result.append(info);
-        }
+            String upstreamInfo = getUpstreamFromServiceNameAndData(serviceName, upstreamDatas);
+            result.append(upstreamInfo);
 
+            //生成server块
+            String serverInfo = getServerBlockFromHostAndServiceName(host, serviceName);
+            result.append(serverInfo);
+        }
+        
         return CodeMsg.SuccessWithData(result.toString());
     }
     
+    private String getServerBlockFromHostAndServiceName(String host, String serviceName) {
+        StringBuilder builder = new StringBuilder();
+        builder.append("server {\n");
+
+        builder.append("listen 80;\n");
+        builder.append("server_name " + host + ";\n");
+
+        builder.append("location / {\n");
+        builder.append("proxy_pass http://" + serviceName + ";\n");
+
+        builder.append("}\n}\n");
+
+        return builder.toString();
+    }
+
     private String getUpstreamFromServiceNameAndData(String serviceName, List<UpstreamData> list) {
         StringBuilder builder = new StringBuilder();
         builder.append("upstream " + serviceName + "{\n");
@@ -88,19 +112,14 @@ public class NginxConfigService {
         return builder.toString();
     }
 
-    private List<String> getAllServiceName() {
+    private List<FlowRouteDefinition> getAllServiceInfo() {
         SqlSession sqlSession = null;
         try {
            sqlSession = sqlSessionBuilder.getSqlSession();
            FlowRouteMapper mapper = sqlSession.getMapper(FlowRouteMapper.class);
            List<FlowRouteDefinition> definitions = mapper.getAllFlowRouteDefinition();
            
-           List<String> serviceNames = new LinkedList<>();
-           for(FlowRouteDefinition definition : definitions) {
-               serviceNames.add(definition.getService());
-           }
-           
-           return serviceNames;
+           return definitions;
         } finally {
             if(sqlSession != null) {
                 sqlSession.close();

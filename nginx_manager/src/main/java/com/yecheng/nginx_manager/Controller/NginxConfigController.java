@@ -16,9 +16,10 @@ public class NginxConfigController {
     @Autowired
     private NginxConfigService service;
     
-    @GetMapping("/upstream")
+    @GetMapping("/dynamic")
     @ResponseBody
     public CodeMsg<String> getAllUpstream() {
-        return service.getAllUpstream();
+        return service.getAllDynamicConfig();
     }
+
 }
