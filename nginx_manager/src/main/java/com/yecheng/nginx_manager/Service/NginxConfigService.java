@@ -60,6 +60,7 @@ public class NginxConfigService {
                 String port = map.get(APIPort);
                 String weight = map.get(ServiceWeight);
                 if(ip == null || port == null) {
+                   logger.error("service: {} tag do not contain ip or port");
                    throw new MyException(CodeMsg.InfoLack);
                 }
 
