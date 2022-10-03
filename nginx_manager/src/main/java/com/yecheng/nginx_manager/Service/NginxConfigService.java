@@ -47,7 +47,7 @@ public class NginxConfigService {
         
         //对每一个服务，生成server块和upstream块
         for (FlowRouteDefinition service : services) {
-            String serviceName = service.getService();
+            String serviceName = CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, service.getService());
             String host = service.getHost();
             logger.info("begin init upstream and server, serviceName is:{}, host is:{}", serviceName, host);
             
@@ -93,8 +93,7 @@ public class NginxConfigService {
         builder.append("server_name " + host + ";\n");
 
         builder.append("location / {\n");
-        String cName = CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, serviceName);
-        builder.append("proxy_pass http://" + cName + ";\n");
+        builder.append("proxy_pass http://" + serviceName + ";\n");
 
         builder.append("}\n}\n");
 
