@@ -7,19 +7,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yecheng.nginx_manager.Data.CodeMsg;
-import com.yecheng.nginx_manager.Service.NginxConfigService;
+import com.yecheng.nginx_manager.Service.FourLoadBalanceService;
+import com.yecheng.nginx_manager.Service.SevenLoadBalanceService;
 
 @Controller
 @RequestMapping("/nginx_config")
 public class NginxConfigController {
     
     @Autowired
-    private NginxConfigService service;
+    private SevenLoadBalanceService seven;
+
+    @Autowired
+    private FourLoadBalanceService four;
     
-    @GetMapping("/dynamic")
+    @GetMapping("/seven")
     @ResponseBody
-    public CodeMsg<String> getAllUpstream() {
-        return service.getAllDynamicConfig();
+    public CodeMsg<String> getSevenLoadBalance() {
+        return seven.getSevenLoadBalanceConfig();
     }
     
+    @GetMapping
+    @ResponseBody
+    public CodeMsg<String> getFourLoadBalance() {
+        return four.getFourLoadBalanceConfig();
+    }
 }
