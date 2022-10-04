@@ -26,7 +26,7 @@ public class NginxConfigController {
         return seven.getSevenLoadBalanceConfig();
     }
     
-    @GetMapping
+    @GetMapping("/four")
     @ResponseBody
     public CodeMsg<String> getFourLoadBalance() {
         return four.getFourLoadBalanceConfig();
