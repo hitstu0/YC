@@ -15,7 +15,7 @@ public class Producer {
     @Autowired
     private DiscoveryClient discoveryClient;
     
-    @Bean(name = "producer")
+    @Bean(name = "rmqproducer")
     public DefaultMQProducer getProducer() throws MQClientException {
         ProducerBuilder builder = new ProducerBuilder(discoveryClient, "namesrv");
         DefaultMQProducer producer =  builder.getProducer("yecheng", 100);

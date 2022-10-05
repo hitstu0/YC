@@ -1,5 +1,7 @@
 package com.yecheng.log_manager.Service;
 
+import javax.annotation.Resource;
+
 import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
@@ -13,8 +15,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class RmqService {
     Logger logger = LoggerFactory.getLogger(RmqService.class);
-    
-    @Autowired
+
+    @Resource(name = "rmqproducer")
     private DefaultMQProducer producer;
 
     public boolean sendLog(String log) {
