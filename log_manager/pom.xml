@@ -49,6 +49,39 @@
 	       <artifactId>commons-io</artifactId>
 	       <version>2.7</version>
         </dependency> 
+
+		<!--数据库连接-->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+
+        <dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+        <dependency>
+			<groupId>com.yecheng</groupId>
+	        <artifactId>ymysql</artifactId>
+	        <version>1.0.0-RELEASE</version>
+		</dependency>
+
+		<!-- Data-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.4</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.79</version>
+		</dependency>
 	</dependencies>
 
 	<build>

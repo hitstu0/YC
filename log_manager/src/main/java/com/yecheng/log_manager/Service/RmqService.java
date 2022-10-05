@@ -12,6 +12,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.alibaba.fastjson.JSON;
+import com.yecheng.log_manager.Data.LogData;
+
 @Component
 public class RmqService {
     Logger logger = LoggerFactory.getLogger(RmqService.class);
@@ -19,11 +22,12 @@ public class RmqService {
     @Resource(name = "rmqproducer")
     private DefaultMQProducer producer;
 
-    public boolean sendLog(String log) {
+    public boolean sendLog(LogData log) {
         Message msg = new Message();
         msg.setTopic("logs");
         msg.setTags("send");
-        msg.setBody(log.getBytes());
+        msg.setBody(JSON.toJSONString(log).getBytes());
+        
         try {
             producer.send(msg);
         } catch (Exception e) {
