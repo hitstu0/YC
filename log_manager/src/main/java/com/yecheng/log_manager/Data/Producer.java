@@ -19,6 +19,7 @@ public class Producer {
     public DefaultMQProducer getProducer() throws MQClientException {
         ProducerBuilder builder = new ProducerBuilder(discoveryClient, "namesrv");
         DefaultMQProducer producer =  builder.getProducer("yecheng", 100);
+        
         producer.start();
         return producer;
     }
