@@ -26,7 +26,7 @@ public class Consumer {
 
     @Bean(name = "rmqconsumer")
     public DefaultMQPushConsumer getConsumer() throws MQClientException {
-        ConsumerBuilder builder = new ConsumerBuilder(discoveryClient, "namesrv");
+        ConsumerBuilder builder = new ConsumerBuilder(discoveryClient, "rocketmq");
         try {
             DefaultMQPushConsumer consumer = builder.getConsumer("yecheng", "logs", "send", new Listener());
             consumer.start();
