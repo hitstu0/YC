@@ -24,7 +24,7 @@ public class Consumer {
     @Autowired
     private DiscoveryClient discoveryClient;
 
-    @Bean(name = "consumer")
+    @Bean(name = "rmqconsumer")
     public DefaultMQPushConsumer getConsumer() throws MQClientException {
         ConsumerBuilder builder = new ConsumerBuilder(discoveryClient, "namesrv");
         try {
