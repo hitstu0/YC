@@ -52,7 +52,7 @@
 		<repository>
 			<id>yecheng</id>
 			<name>yecheng</name>
-			<url>http://120.77.221.92:8081/repository/yecheng/</url>
+			<url>http://47.115.214.28:8081/repository/yecheng/</url>
 		</repository>
 	</distributionManagement>
  

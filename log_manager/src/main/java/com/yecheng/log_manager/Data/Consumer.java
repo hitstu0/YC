@@ -31,17 +31,22 @@ public class Consumer {
 
     @Bean(name = "rmqconsumer")
     public DefaultMQPushConsumer getConsumer() throws MQClientException {
-
+        logger.info("start init consumer");
         ConsumerBuilder builder = new ConsumerBuilder(discoveryClient, "rocketmq");
 
         try {
             DefaultMQPushConsumer consumer = builder.getConsumer("yecheng", "logs", "send", new Listener());
             consumer.start();
+
+            logger.info("init consumer success");
+            
             return consumer;
         } catch (MQClientException e) {
             logger.error("create consumer err: {}", e.getMessage());
             throw e;
         }
+
+        
     }
 
     class Listener implements MessageListenerConcurrently {

@@ -2,19 +2,23 @@ package com.yecheng.log_manager.Mybatis.SqlSessionFactory;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Component;
 
 import com.yecheng.log_manager.Data.LogData;
+import com.yecheng.log_manager.Data.LogRequestData;
 import com.yecheng.log_manager.Mybatis.Mapper.LogMapper;
 import com.yecheng.ymysql.DataSource.SqlSessionPool;
 
 
 @Component
 public class SqlSessionBuilder implements CommandLineRunner{
-    
+    private Logger logger = LoggerFactory.getLogger(SqlSessionBuilder.class);
+
     @Autowired
     private DiscoveryClient client;
     private SqlSessionPool sqlSessionPool;
@@ -23,6 +27,7 @@ public class SqlSessionBuilder implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
+         logger.info("sqlsession start");
         sqlSessionPool = new SqlSessionPool("mysql", "myDatas", "root", "123456yd", client);
         sqlSessionPool.initSqlSessionPool();
         
@@ -30,6 +35,7 @@ public class SqlSessionBuilder implements CommandLineRunner{
         addMapper();
 
         factory = sqlSessionPool.getSqlSessionFactory();
+        
     }
 
     private void addMapper() {
@@ -38,6 +44,7 @@ public class SqlSessionBuilder implements CommandLineRunner{
 
     private void addAlias() {
         sqlSessionPool.addAlias("log", LogData.class);
+        sqlSessionPool.addAlias("req", LogRequestData.class);
     }
     
     public SqlSession getSqlSession() {
