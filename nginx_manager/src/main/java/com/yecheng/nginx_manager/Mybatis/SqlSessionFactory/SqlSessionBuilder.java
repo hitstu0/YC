@@ -7,9 +7,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Component;
 
+
 import com.yecheng.nginx_manager.Data.FlowRouteDefinition;
 import com.yecheng.nginx_manager.Data.FlowRouteDefinitionDB;
+import com.yecheng.nginx_manager.Data.RouteDefinitionDBData;
+import com.yecheng.nginx_manager.Data.RouteDefinitionData;
 import com.yecheng.nginx_manager.Mybatis.Mapper.FlowRouteMapper;
+import com.yecheng.nginx_manager.Mybatis.Mapper.RouteDefinitionMapper;
 import com.yecheng.ymysql.DataSource.SqlSessionPool;
 
 @Component
@@ -36,11 +40,14 @@ public class SqlSessionBuilder implements CommandLineRunner{
 
     private void addMapper() {
         sqlSessionPool.addMapper(FlowRouteMapper.class);
+        sqlSessionPool.addMapper(RouteDefinitionMapper.class);
     }
 
     private void addAlias() {
         sqlSessionPool.addAlias("FlowRouteDefinitionDB", FlowRouteDefinitionDB.class);
         sqlSessionPool.addAlias("FlowRouteDefinition", FlowRouteDefinition.class);
+        sqlSessionPool.addAlias("RouteDefinition", RouteDefinitionData.class);
+        sqlSessionPool.addAlias("RouteDefinitionDB", RouteDefinitionDBData.class);
     }
     
     public SqlSession getSqlSession() {

@@ -75,10 +75,11 @@ public class LoggerService {
         String[] loggerSplit = Strings.split(loggerClass, ':');
 
         String data = datas[4];
+        String logId = "";
         String[] dataSplit = org.apache.commons.lang3.StringUtils.split(data, ":", 2);
-        if (dataSplit == null || dataSplit.length != 2) {
-            logger.error("log data do not match template");
-            throw new RuntimeException("data split err");
+        if (dataSplit.length == 2) {
+            logId = dataSplit[0];
+            data = dataSplit[1];
         }
 
         logData.setLogTime(date.getTime());
@@ -88,8 +89,8 @@ public class LoggerService {
         logData.setLogger(loggerSplit[0]);
         logData.setLine(loggerSplit[1]);
   
-        logData.setLogId(dataSplit[0]);
-        logData.setData(dataSplit[1]);
+        logData.setLogId(logId);
+        logData.setData(data);
 
         return logData;
     }

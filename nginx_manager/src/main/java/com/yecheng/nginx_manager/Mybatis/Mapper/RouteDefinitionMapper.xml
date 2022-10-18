@@ -9,4 +9,13 @@
         where service_hash = #{serviceHash}
     </select>
 
+    <insert id="setRouteDefinition" parameterType="RouteDefinitionDB">
+      insert into RouteDefinition(service_name, service_hash, path, path_hash)
+      values(#{serviceName}, #{serviceHash}, #{path}, #{pathHash})
+  </insert>
+
+  <insert id="deleteRouteDefinition">
+      delete from RouteDefinition
+      where path_hash = #{pathHash} and service_hash = #{serviceHash}
+  </insert>
 </mapper>
