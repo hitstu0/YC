@@ -32,7 +32,7 @@ public class Consumer {
     @Bean(name = "rmqconsumer")
     public DefaultMQPushConsumer getConsumer() throws MQClientException {
         logger.info("start init consumer");
-        ConsumerBuilder builder = new ConsumerBuilder(discoveryClient, "rocketmq");
+        ConsumerBuilder builder = new ConsumerBuilder(discoveryClient, "rocketmq-9876");
 
         try {
             DefaultMQPushConsumer consumer = builder.getConsumer("yecheng", "logs", "send", new Listener());

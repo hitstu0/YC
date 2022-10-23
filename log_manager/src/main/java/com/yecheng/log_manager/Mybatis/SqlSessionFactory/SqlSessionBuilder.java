@@ -27,7 +27,7 @@ public class SqlSessionBuilder implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-         logger.info("sqlsession start");
+        logger.info("sqlsession start");
         sqlSessionPool = new SqlSessionPool("mysql", "myDatas", "root", "123456yd", client);
         sqlSessionPool.initSqlSessionPool();
         
