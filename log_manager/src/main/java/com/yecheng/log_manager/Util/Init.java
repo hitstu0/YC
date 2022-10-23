@@ -27,7 +27,7 @@ public class Init implements CommandLineRunner{
     public void run(String... args) throws Exception {
         logger.info("start file listener");
         //监控目录
-        String rootDir = "/root/logs";
+        String rootDir = "/Users/bytedance/logs";
         //轮询间隔
         long interval = TimeUnit.SECONDS.toMillis(1);
 
