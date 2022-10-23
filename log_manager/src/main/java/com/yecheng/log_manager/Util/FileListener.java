@@ -19,13 +19,11 @@ public class FileListener extends FileAlterationListenerAdaptor{
 
     @Override
     public void onFileCreate(File file) {
-        logger.info("file create: {}", file.getAbsolutePath());
         loggerService.addLogFileCheck(file.getAbsolutePath());
     }
 
     @Override
     public void onFileChange(File file) {
-        logger.info("file change: {}", file.getAbsolutePath());
         loggerService.sendNewLog(file.getAbsolutePath());
     }
 }

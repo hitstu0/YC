@@ -43,11 +43,9 @@ public class LoggerService {
         } 
 
         for (String log : logs) {
-            logger.info("begin send log：{}", log);
         
             String[] logSplitData = org.apache.commons.lang3.StringUtils.split(log, " ", 5);
             if (logSplitData == null || logSplitData.length != 5) {
-                logger.error("log do not match template");
                 continue;
             }
 
@@ -55,7 +53,6 @@ public class LoggerService {
             try {
                 data = getLogData(logSplitData);
             } catch (Exception e) {
-                logger.error("parse log err");
                 continue;
             }
 
