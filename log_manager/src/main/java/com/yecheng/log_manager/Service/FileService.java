@@ -41,8 +41,7 @@ public class FileService {
         
         Long index = indexMap.get(path);
         if( index == null ) {
-            logger.error("file: {} not create yet", path);
-            return list;
+            index = new Long(0);
         }
 
         randomAccessFile.seek(index);
