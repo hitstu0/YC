@@ -21,7 +21,7 @@ public class Producer {
     @Bean(name = "rmqproducer")
     public DefaultMQProducer getProducer() throws MQClientException {
         logger.info("start init producer");
-        ProducerBuilder builder = new ProducerBuilder(discoveryClient, "rocketmq-9876");
+        ProducerBuilder builder = new ProducerBuilder(discoveryClient, "rocketmq");
         DefaultMQProducer producer =  builder.getProducer("yecheng", 300);
         
         producer.start();
