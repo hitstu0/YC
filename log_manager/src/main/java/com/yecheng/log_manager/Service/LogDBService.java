@@ -18,7 +18,6 @@ public class LogDBService {
     private SqlSessionBuilder sqlSessionBuilder;
 
     public void writeLog(LogData logData) {
-        logger.info("begin write log");
         
         SqlSession sqlSession = null;
         try {
@@ -26,8 +25,6 @@ public class LogDBService {
             LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
             logMapper.saveLog(logData);
             sqlSession.commit();
-
-            logger.info("write log success");
         } catch(Exception e) {
             e.printStackTrace();
         } finally {

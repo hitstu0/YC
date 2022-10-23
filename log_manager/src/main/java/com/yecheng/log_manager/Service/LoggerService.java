@@ -41,9 +41,8 @@ public class LoggerService {
            logger.error("get new update log err: {}", e.getMessage());
            return;
         } 
-
         for (String log : logs) {
-        
+            System.out.println(log);
             String[] logSplitData = org.apache.commons.lang3.StringUtils.split(log, " ", 5);
             if (logSplitData == null || logSplitData.length != 5) {
                 continue;

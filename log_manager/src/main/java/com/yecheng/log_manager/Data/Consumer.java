@@ -54,6 +54,7 @@ public class Consumer {
         @Override
         public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> msgs, ConsumeConcurrentlyContext context) {
             for (MessageExt msg : msgs) {
+                System.out.println("Consumer.Listener.consumeMessage()");
                 LogData logData = JSON.toJavaObject(JSON.parseObject(new String(msg.getBody())), LogData.class) ;
                 logDBService.writeLog(logData);
             }
