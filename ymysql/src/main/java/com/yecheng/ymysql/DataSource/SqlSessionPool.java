@@ -34,7 +34,8 @@ public class SqlSessionPool {
     private final String driver = "com.mysql.jdbc.Driver";
     private final String urlPre = "jdbc:mysql://";
     private final String urlPost = "?useUnicode=true&characterEncoding=utf8&useSSL=false" + 
-    "&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true";
+    "&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true" +
+    "&autoReconnect=true&autoReconnectForPools=true";
 
     private DataSource dataSource;
     private Configuration configuration;
