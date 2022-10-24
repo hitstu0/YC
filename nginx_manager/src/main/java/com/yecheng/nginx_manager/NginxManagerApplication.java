@@ -11,6 +11,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 public class NginxManagerApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("rocketmq.client.logRoot","lo/");
+		
 		SpringApplication.run(NginxManagerApplication.class, args);
 	}
 
