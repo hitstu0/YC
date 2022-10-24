@@ -2,7 +2,7 @@
 
 <configuration>
     <!-- 定义日志的根目录 -->
-    <property name="LOG_HOME" value="./log"/>
+    <property name="LOG_HOME" value="./logs"/>
 
     <!-- ch.qos.logback.core.ConsoleAppender 表示控制台输出 -->
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
