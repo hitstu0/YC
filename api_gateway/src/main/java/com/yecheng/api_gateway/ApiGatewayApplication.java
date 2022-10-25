@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 public class ApiGatewayApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("rocketmq.client.logRoot","lo/");
 		SpringApplication.run(ApiGatewayApplication.class, args);
 	}
 
