@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.yecheng</groupId>
 	<artifactId>ymysql</artifactId>
-	<version>1.0.3-RELEASE</version>
+	<version>1.0.4-RELEASE</version>
 	<name>ymysql</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>

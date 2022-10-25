@@ -1,5 +1,6 @@
 package com.yecheng.ymysql.DataSource;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -96,7 +97,12 @@ public class SqlSessionPool {
         
         if (!unpool) dataSource = new PooledDataSource(driver, url, userName, password);
         else dataSource = new UnpooledDataSource(driver, url, userName, password);
-        
+        try {
+            dataSource.setLoginTimeout(1800);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         //事物
         TransactionFactory transactionFactory = new JdbcTransactionFactory();
         //环境
