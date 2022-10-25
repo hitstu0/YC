@@ -38,7 +38,9 @@ public class SqlSessionPool {
     "&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true" +
     "&autoReconnect=true&autoReconnectForPools=true";
 
-    private DataSource dataSource;
+    private PooledDataSource pooldataSource;
+    private UnpooledDataSource unpoolSource;
+    private DataSource dataSource; 
     private Configuration configuration;
 
 
@@ -95,14 +97,17 @@ public class SqlSessionPool {
         String url = urlPre + host + ":" + port + "/" + dataBase + urlPost;
         logger.info("datasource url is: {}", url);
         
-        if (!unpool) dataSource = new PooledDataSource(driver, url, userName, password);
-        else dataSource = new UnpooledDataSource(driver, url, userName, password);
-        try {
-            dataSource.setLoginTimeout(1800);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+        if (!unpool) pooldataSource = new PooledDataSource(driver, url, userName, password);
+        else unpoolSource = new UnpooledDataSource(driver, url, userName, password);
+        if (unpool) {
+            dataSource = unpoolSource;
+        } else {
+            pooldataSource.setLoginTimeout(180);
+            pooldataSource.setPoolMaximumActiveConnections(3);
+            pooldataSource.setPoolMaximumIdleConnections(3);
+            dataSource = pooldataSource;
         }
+
         //事物
         TransactionFactory transactionFactory = new JdbcTransactionFactory();
         //环境

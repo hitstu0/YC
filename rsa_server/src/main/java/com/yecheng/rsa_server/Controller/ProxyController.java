@@ -29,7 +29,7 @@ import com.yecheng.rsa_server.Service.RsaService;
 
 @Controller
 public class ProxyController {
-    private String targetAddr = "http://127.0.0.1:8083";
+    private String targetAddr = "http://120.78.165.96:80";
 
     @Autowired
     private RsaService rsaService;
