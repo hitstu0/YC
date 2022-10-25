@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>com.yecheng</groupId>
 			<artifactId>ymysql</artifactId>
-			<version>1.0.4-RELEASE</version>
+			<version>1.0.5-RELEASE</version>
 		</dependency>
 
 		 <!-- 服务发现-->
