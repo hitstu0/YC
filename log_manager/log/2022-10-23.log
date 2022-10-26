@@ -1,0 +1,989 @@
+2022-10-23 19:11:29 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 19:11:31 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 19:11:31 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 19:11:31 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 19:11:31 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 19:11:31 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 19:11:32 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 19:11:32 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 19:11:32 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 19:11:32 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@42d73c61
+2022-10-23 19:11:32 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 172.19.0.6, port 9876
+2022-10-23 19:11:32 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 19:11:32 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 19:11:33 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 19:11:33 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 19:11:33 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 19:11:33 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@42d73c61
+2022-10-23 19:11:33 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 172.19.0.6, port 9876
+2022-10-23 19:11:33 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 19:11:36 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:11:36 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:11:36 INFO org.apache.catalina.core.StandardService:180 Stopping service [Tomcat]
+2022-10-23 19:11:39 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:33:16 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 19:33:18 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 19:33:18 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 19:33:18 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 19:33:18 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 19:33:18 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 19:33:19 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 19:33:19 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 19:33:19 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 19:33:19 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@5ec46cdd
+2022-10-23 19:33:20 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 172.19.0.6, port 9876
+2022-10-23 19:33:20 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 19:33:20 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 19:33:20 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 19:33:20 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 19:33:20 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 19:33:20 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@5ec46cdd
+2022-10-23 19:33:20 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 172.19.0.6, port 9876
+2022-10-23 19:33:20 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 19:33:23 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:33:23 INFO org.apache.catalina.core.StandardService:180 Stopping service [Tomcat]
+2022-10-23 19:33:26 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:35:30 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 19:35:32 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 19:35:32 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 19:35:32 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 19:35:32 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 19:35:32 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 19:35:33 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 19:35:33 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 19:35:33 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 19:35:33 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@46cb98a3
+2022-10-23 19:35:33 ERROR com.example.rmqconnect.RmqService.ProducerBuilder:31 service is null, serviceName is rocketmq
+2022-10-23 19:35:33 INFO org.apache.catalina.core.StandardService:180 Stopping service [Tomcat]
+2022-10-23 19:35:43 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 19:35:45 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 19:35:45 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 19:35:45 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 19:35:45 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 19:35:45 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 19:35:46 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 19:35:46 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 19:35:46 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 19:35:46 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@4a23350
+2022-10-23 19:35:46 ERROR com.example.rmqconnect.RmqService.ProducerBuilder:31 service is null, serviceName is rocketmq
+2022-10-23 19:35:46 INFO org.apache.catalina.core.StandardService:180 Stopping service [Tomcat]
+2022-10-23 19:37:46 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 19:37:48 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 19:37:48 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 19:37:48 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 19:37:49 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 19:37:49 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 19:37:50 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 19:37:50 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 19:37:50 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 19:37:50 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@46cb98a3
+2022-10-23 19:37:50 ERROR com.example.rmqconnect.RmqService.ProducerBuilder:31 service is null, serviceName is rocketmq
+2022-10-23 19:37:50 INFO org.apache.catalina.core.StandardService:180 Stopping service [Tomcat]
+2022-10-23 19:38:47 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 19:38:49 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 19:38:49 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 19:38:49 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 19:38:49 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 19:38:49 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 19:38:50 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 19:38:50 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq-9876
+2022-10-23 19:38:50 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 19:38:50 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@46cb98a3
+2022-10-23 19:38:51 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 172.30.53.253, port 9876
+2022-10-23 19:38:51 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 19:38:51 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 19:38:51 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 19:38:51 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq-9876
+2022-10-23 19:38:51 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 19:38:51 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@46cb98a3
+2022-10-23 19:38:51 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 172.30.53.253, port 9876
+2022-10-23 19:38:51 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 19:38:54 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:38:54 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:38:57 INFO org.apache.catalina.core.StandardService:180 Stopping service [Tomcat]
+2022-10-23 19:38:57 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:47:53 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 19:47:54 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 19:47:54 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 19:47:54 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 19:47:54 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 19:47:55 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 19:47:56 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 19:47:56 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq-9876
+2022-10-23 19:47:56 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 19:47:56 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@571a9686
+2022-10-23 19:47:56 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 172.30.53.253, port 9876
+2022-10-23 19:47:56 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 19:47:56 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 19:47:56 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 19:47:56 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq-9876
+2022-10-23 19:47:56 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 19:47:56 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@571a9686
+2022-10-23 19:47:56 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 172.30.53.253, port 9876
+2022-10-23 19:47:56 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 19:47:59 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:47:59 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:47:59 INFO org.apache.catalina.core.StandardService:180 Stopping service [Tomcat]
+2022-10-23 19:48:02 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[] result: true
+2022-10-23 19:59:23 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 19:59:25 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 19:59:25 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 19:59:25 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 19:59:25 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 19:59:25 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 19:59:26 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 19:59:26 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq-9876
+2022-10-23 19:59:26 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 19:59:26 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@112d1c8e
+2022-10-23 19:59:26 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 19:59:26 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 19:59:27 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 19:59:27 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 19:59:27 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq-9876
+2022-10-23 19:59:27 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 19:59:27 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@112d1c8e
+2022-10-23 19:59:27 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 19:59:27 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 19:59:27 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 19:59:27 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 19:59:27 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 19:59:27 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 19:59:27 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 19:59:29 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 19:59:29 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 19:59:29 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.434 seconds (JVM running for 7.8)
+2022-10-23 19:59:29 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 19:59:29 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 19:59:29 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 19:59:29 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 19:59:29 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 19:59:29 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 19:59:29 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 19:59:29 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 19:59:34 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 19:59:34 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:32:28 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 20:32:30 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:32:30 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 20:32:30 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 20:32:30 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 20:32:30 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 20:32:31 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 20:32:31 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 20:32:31 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 20:32:31 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@117bcfdc
+2022-10-23 20:32:31 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 20:32:31 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 20:32:31 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 20:32:31 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 20:32:31 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 20:32:31 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 20:32:31 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@117bcfdc
+2022-10-23 20:32:32 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 20:32:32 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 20:32:32 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 20:32:32 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:32:32 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:32:32 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:32:32 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:32:34 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:32:34 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 20:32:34 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 8.04 seconds (JVM running for 8.782)
+2022-10-23 20:32:34 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 20:32:34 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 20:32:34 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 20:32:34 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 20:32:34 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 20:32:34 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 20:32:34 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 20:32:34 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 20:32:36 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 20:32:36 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:32:36 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 20:32:36 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:33:19 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 20:33:20 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:33:20 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 20:33:20 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 20:33:20 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 20:33:21 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 20:33:22 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 20:33:22 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 20:33:22 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 20:33:22 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@5e746d37
+2022-10-23 20:33:22 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 20:33:22 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 20:33:22 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 20:33:22 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 20:33:22 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 20:33:22 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 20:33:22 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@5e746d37
+2022-10-23 20:33:22 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 20:33:22 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 20:33:23 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 20:33:23 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:33:23 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:33:23 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:33:23 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:33:25 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:33:25 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 20:33:25 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.697 seconds (JVM running for 8.175)
+2022-10-23 20:33:25 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 20:33:25 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 20:33:25 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 20:33:25 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 20:33:25 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 20:33:25 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 20:33:25 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 20:33:25 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 20:34:29 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 20:34:29 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:34:29 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 20:34:29 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:35:00 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 20:35:02 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:35:02 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 20:35:02 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 20:35:02 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 20:35:02 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 20:35:03 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 20:35:03 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 20:35:03 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 20:35:03 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@6ec65b5e
+2022-10-23 20:35:03 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 20:35:03 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 20:35:04 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 20:35:04 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 20:35:04 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 20:35:04 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 20:35:04 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@6ec65b5e
+2022-10-23 20:35:04 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 20:35:04 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 20:35:04 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 20:35:05 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:35:05 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:35:05 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:35:05 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:35:06 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:35:06 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 20:35:06 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 8.339 seconds (JVM running for 9.009)
+2022-10-23 20:35:06 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 20:35:06 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 20:35:06 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 20:35:06 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 20:35:06 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 20:35:06 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 20:35:06 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 20:35:07 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 20:35:46 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 20:35:46 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:35:46 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 20:35:46 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:36:36 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 20:36:38 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:36:38 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 20:36:38 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 20:36:38 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 20:36:38 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 20:36:40 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 20:36:40 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 20:36:40 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 20:36:40 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@112d1c8e
+2022-10-23 20:36:40 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 20:36:40 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 20:36:40 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 20:36:40 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 20:36:40 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 20:36:40 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 20:36:40 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@112d1c8e
+2022-10-23 20:36:40 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 20:36:40 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 20:36:41 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 20:36:41 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:36:41 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:36:41 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:36:41 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:36:42 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:36:42 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 20:36:43 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 8.213 seconds (JVM running for 8.747)
+2022-10-23 20:36:43 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 20:36:43 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 20:36:43 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 20:36:43 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 20:36:43 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 20:36:43 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 20:36:43 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 20:36:43 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 20:37:13 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 20:37:13 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:37:14 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 20:37:14 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:40:12 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 20:40:13 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:40:13 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 20:40:13 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 20:40:13 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 20:40:13 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 20:40:15 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 20:40:15 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 20:40:15 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 20:40:15 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@117bcfdc
+2022-10-23 20:40:15 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 20:40:15 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 20:40:15 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 20:40:15 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 20:40:15 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 20:40:15 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 20:40:15 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@117bcfdc
+2022-10-23 20:40:15 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 20:40:15 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 20:40:16 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 20:40:16 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:40:16 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:40:16 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:40:16 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:40:17 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:40:17 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 20:40:17 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.485 seconds (JVM running for 7.9)
+2022-10-23 20:40:17 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 20:40:17 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 20:40:17 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 20:40:18 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 20:40:18 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 20:40:18 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 20:40:18 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 20:40:18 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 20:40:50 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 20:40:50 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:40:50 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 20:40:50 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 20:41:47 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 20:41:49 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:41:49 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 20:41:49 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 20:41:49 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 20:41:49 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 20:41:51 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 20:41:51 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 20:41:51 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 20:41:51 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@21d1b321
+2022-10-23 20:41:51 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 20:41:51 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 20:41:51 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 20:41:51 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 20:41:51 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 20:41:51 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 20:41:51 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@21d1b321
+2022-10-23 20:41:51 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 20:41:51 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 20:41:52 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 20:41:52 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:41:52 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:41:52 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 20:41:52 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 20:41:54 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 20:41:54 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 20:41:54 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 8.284 seconds (JVM running for 8.7)
+2022-10-23 20:41:54 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 20:41:54 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 20:41:54 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 20:41:54 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 20:41:54 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 20:41:54 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 20:41:54 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 20:41:54 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:11:27 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:12:32 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:12:32 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:12:32 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:12:32 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:13:17 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:13:19 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:13:19 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:13:19 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:13:19 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:13:19 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:13:20 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:13:20 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:13:20 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:13:20 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@7ea899a9
+2022-10-23 21:13:21 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:13:21 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:13:21 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:13:21 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:13:21 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:13:21 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:13:21 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@7ea899a9
+2022-10-23 21:13:21 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:13:21 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:13:22 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:13:22 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:13:22 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:13:22 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:13:22 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:13:23 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:13:23 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:13:23 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.448 seconds (JVM running for 7.908)
+2022-10-23 21:13:23 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:13:23 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:13:23 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:13:23 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:13:23 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:13:23 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:13:23 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:13:23 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:13:48 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:13:48 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:13:48 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:13:48 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:15:08 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:15:10 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:15:10 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:15:10 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:15:10 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:15:10 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:15:12 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:15:12 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:15:12 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:15:12 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@3ffb3598
+2022-10-23 21:15:12 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:15:12 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:15:12 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:15:12 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:15:12 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:15:12 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:15:12 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@3ffb3598
+2022-10-23 21:15:13 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:15:13 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:15:13 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:15:13 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:15:13 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:15:13 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:15:13 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:15:15 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:15:15 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:15:15 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 8.831 seconds (JVM running for 9.248)
+2022-10-23 21:15:15 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:15:15 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:15:15 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:15:15 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:15:15 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:15:15 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:15:15 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:15:15 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:17:10 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:17:10 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:17:10 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:17:10 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:17:20 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:17:21 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:17:21 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:17:21 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:17:21 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:17:21 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:17:23 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:17:23 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:17:23 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:17:23 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@7b78ed6a
+2022-10-23 21:17:23 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:17:23 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:17:23 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:17:23 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:17:23 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:17:23 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:17:24 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@7b78ed6a
+2022-10-23 21:17:24 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:17:24 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:17:24 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:17:24 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:17:24 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:17:24 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:17:24 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:17:26 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:17:26 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:17:26 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.553 seconds (JVM running for 7.933)
+2022-10-23 21:17:26 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:17:26 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:17:26 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:17:26 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:17:26 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:17:26 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:17:26 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:17:26 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:17:42 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:17:42 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:17:43 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:17:43 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:18:02 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:18:04 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:18:04 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:18:04 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:18:04 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:18:04 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:18:05 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:18:05 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:18:05 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:18:05 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@47447ccf
+2022-10-23 21:18:05 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:18:05 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:18:05 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:18:05 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:18:05 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:18:05 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:18:05 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@47447ccf
+2022-10-23 21:18:05 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:18:05 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:18:06 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:18:06 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:18:06 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:18:06 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:18:06 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:18:08 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:18:08 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:18:08 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 6.92 seconds (JVM running for 7.414)
+2022-10-23 21:18:08 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:18:08 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:18:08 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:18:08 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:18:08 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:18:08 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:18:08 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:18:08 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:18:26 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:18:26 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:18:26 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:18:26 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:19:13 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:19:15 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:19:15 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:19:15 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:19:15 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:19:15 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:19:16 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:19:16 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:19:16 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:19:16 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@46cb98a3
+2022-10-23 21:19:16 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:19:16 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:19:16 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:19:16 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:19:16 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:19:16 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:19:16 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@46cb98a3
+2022-10-23 21:19:16 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:19:16 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:19:17 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:19:17 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:19:17 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:19:17 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:19:17 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:19:19 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:19:19 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:19:19 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.65 seconds (JVM running for 8.085)
+2022-10-23 21:19:19 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:19:19 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:19:19 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:19:19 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:19:19 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:19:19 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:19:19 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:19:20 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:19:35 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:19:35 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:19:35 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:19:35 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:23:16 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:23:18 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:23:18 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:23:18 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:23:18 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:23:18 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:23:19 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:23:19 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:23:19 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:23:19 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@3ffb3598
+2022-10-23 21:23:19 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:23:19 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:23:19 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:23:19 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:23:19 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:23:19 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:23:19 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@3ffb3598
+2022-10-23 21:23:20 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:23:20 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:23:20 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:23:20 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:23:20 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:23:20 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:23:20 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:23:22 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:23:22 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:23:22 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.338 seconds (JVM running for 7.733)
+2022-10-23 21:23:22 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:23:22 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:23:22 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:23:22 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:23:22 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:23:22 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:23:22 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:23:22 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:23:43 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:23:43 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:23:44 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:23:44 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:24:38 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:24:40 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:24:40 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:24:40 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:24:40 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:24:40 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:24:42 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:24:42 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:24:42 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:24:42 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@46cb98a3
+2022-10-23 21:24:42 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:24:42 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:24:42 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:24:42 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:24:42 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:24:42 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:24:42 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@46cb98a3
+2022-10-23 21:24:42 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:24:42 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:24:43 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:24:43 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:24:43 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:24:43 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:24:43 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:24:44 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:24:44 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:24:45 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.832 seconds (JVM running for 8.198)
+2022-10-23 21:24:45 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:24:45 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:24:45 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:24:45 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:24:45 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:24:45 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:24:45 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:24:45 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:25:05 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:25:05 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:25:05 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:25:05 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:26:42 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:26:44 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:26:44 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:26:44 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:26:44 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:26:44 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:26:46 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:26:46 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:26:46 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:26:46 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@3ffb3598
+2022-10-23 21:26:46 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:26:46 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:26:46 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:26:46 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:26:46 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:26:46 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:26:46 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@3ffb3598
+2022-10-23 21:26:46 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:26:46 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:26:47 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:26:47 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:26:47 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:26:47 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:26:47 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:26:49 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:26:49 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:26:49 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 8.688 seconds (JVM running for 9.084)
+2022-10-23 21:26:49 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:26:49 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:26:49 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:26:49 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:26:49 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:26:49 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:26:49 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:26:49 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:28:39 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:28:39 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:28:40 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:28:40 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:29:21 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:29:23 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:29:23 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:29:23 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:29:23 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:29:23 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:29:24 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:29:24 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:29:24 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:29:24 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@5ec46cdd
+2022-10-23 21:29:24 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:29:24 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:29:24 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:29:24 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:29:24 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:29:24 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:29:24 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@5ec46cdd
+2022-10-23 21:29:24 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:29:24 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:29:25 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:29:25 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:29:25 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:29:25 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:29:25 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:29:26 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:29:26 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:29:27 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.709 seconds (JVM running for 8.097)
+2022-10-23 21:29:27 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:29:27 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:29:27 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:29:27 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:29:27 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:29:27 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:29:27 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:29:27 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:30:20 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:30:20 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:30:20 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:30:20 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:33:18 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:33:20 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:33:20 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:33:20 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:33:20 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:33:20 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:33:21 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:33:21 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:33:21 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:33:21 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@5e746d37
+2022-10-23 21:33:21 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:33:21 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:33:21 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:33:21 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:33:21 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:33:21 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:33:21 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@5e746d37
+2022-10-23 21:33:22 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:33:22 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:33:22 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:33:22 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:33:22 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:33:22 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:33:22 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:33:23 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:33:23 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:33:24 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.692 seconds (JVM running for 8.099)
+2022-10-23 21:33:24 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:33:24 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:33:24 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:33:24 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:33:24 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:33:24 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:33:24 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:33:24 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:34:37 ERROR com.yecheng.log_manager.Service.RmqService:34 send log err: sendDefaultImpl call timeout
+2022-10-23 21:34:37 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:34:49 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:34:49 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:34:49 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:34:49 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:34:53 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:34:54 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:34:54 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:34:54 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:34:54 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:34:55 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:34:56 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:34:56 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:34:56 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:34:56 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@3b2f4a93
+2022-10-23 21:34:56 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:34:56 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:34:56 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:34:56 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:34:56 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:34:56 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:34:56 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@3b2f4a93
+2022-10-23 21:34:56 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:34:56 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:34:57 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:34:57 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:34:57 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:34:57 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:34:57 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:34:59 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:34:59 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:34:59 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.577 seconds (JVM running for 8.285)
+2022-10-23 21:34:59 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:34:59 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:34:59 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:34:59 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:34:59 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:34:59 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:34:59 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:34:59 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:35:25 ERROR com.yecheng.log_manager.Service.RmqService:34 send log err: sendDefaultImpl call timeout
+2022-10-23 21:35:25 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:38:16 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:38:16 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:38:16 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:38:16 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:41:06 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:41:08 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:41:08 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:41:08 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:41:08 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:41:08 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:41:09 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:41:09 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:41:09 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:41:09 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@73a19967
+2022-10-23 21:41:09 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:41:09 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:41:09 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:41:09 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:41:09 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:41:09 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:41:09 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@73a19967
+2022-10-23 21:41:09 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:41:09 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:41:10 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:41:10 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:41:10 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:41:10 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:41:10 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:41:12 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:41:12 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:41:12 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.762 seconds (JVM running for 8.224)
+2022-10-23 21:41:12 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:41:12 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:41:12 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:41:12 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:41:12 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:41:12 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:41:12 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:41:12 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:43:24 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:43:24 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:43:24 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:43:24 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:43:26 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:43:28 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:43:28 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:43:28 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:43:29 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:43:29 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:43:30 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:43:30 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:43:30 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:43:30 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@46cb98a3
+2022-10-23 21:43:30 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:43:30 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:43:30 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:43:30 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:43:30 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:43:30 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:43:30 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@46cb98a3
+2022-10-23 21:43:31 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:43:31 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:43:31 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:43:31 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:43:31 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:43:31 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:43:31 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:43:33 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:43:33 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:43:33 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 8.838 seconds (JVM running for 9.457)
+2022-10-23 21:43:33 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:43:33 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:43:33 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:43:33 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:43:33 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:43:33 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:43:33 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:43:34 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:45:54 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:45:54 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:45:54 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:45:54 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:45:57 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 21:45:58 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:45:58 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 21:45:58 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 21:45:58 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 21:45:58 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 21:46:00 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 21:46:00 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 21:46:00 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 21:46:00 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@3ffb3598
+2022-10-23 21:46:00 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 21:46:00 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 21:46:00 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 21:46:00 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 21:46:00 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 21:46:00 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 21:46:00 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@3ffb3598
+2022-10-23 21:46:01 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 21:46:01 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 21:46:01 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 21:46:01 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:46:01 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:46:01 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 21:46:01 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 21:46:03 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-23 21:46:03 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 21:46:03 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 7.936 seconds (JVM running for 8.511)
+2022-10-23 21:46:03 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 21:46:03 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 21:46:03 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 21:46:03 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 21:46:03 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 21:46:03 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 21:46:03 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 21:46:03 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 21:46:16 ERROR com.yecheng.log_manager.Service.RmqService:34 send log err: sendDefaultImpl call timeout
+2022-10-23 21:47:45 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:47:45 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 21:47:45 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 21:47:45 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 22:36:43 INFO com.yecheng.log_manager.LogManagerApplication:87 No active profile set, falling back to default profiles: default
+2022-10-23 22:36:45 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8081"]
+2022-10-23 22:36:45 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-23 22:36:45 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-23 22:36:45 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-23 22:36:45 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-23 22:36:46 INFO com.yecheng.log_manager.Data.Producer:23 start init producer
+2022-10-23 22:36:46 INFO com.example.rmqconnect.RmqService.ProducerBuilder:19 serviceName is rocketmq
+2022-10-23 22:36:46 INFO com.example.rmqconnect.RmqService.ProducerBuilder:25 begin init producer, group yecheng, timeout 300
+2022-10-23 22:36:46 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@4016ccc1
+2022-10-23 22:36:47 INFO com.example.rmqconnect.RmqService.ProducerBuilder:38 find addr 120.78.165.96, port 9876
+2022-10-23 22:36:47 INFO com.example.rmqconnect.RmqService.ProducerBuilder:43 init producer success
+2022-10-23 22:36:47 INFO com.yecheng.log_manager.Data.Producer:29 init producer success
+2022-10-23 22:36:47 INFO com.yecheng.log_manager.Data.Consumer:34 start init consumer
+2022-10-23 22:36:47 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:22 namesrv Name: rocketmq
+2022-10-23 22:36:47 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:29 begin init consumer group yecheng, topic logs, tagsend
+2022-10-23 22:36:47 INFO com.example.rmqconnect.Discover.DiscoverService:14 discoveryClient: org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient@4016ccc1
+2022-10-23 22:36:47 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:44 find addr host: 120.78.165.96, port 9876
+2022-10-23 22:36:47 INFO com.example.rmqconnect.RmqService.ConsumerBuilder:50 init consumer success
+2022-10-23 22:36:48 INFO com.yecheng.log_manager.Data.Consumer:41 init consumer success
+2022-10-23 22:36:48 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 22:36:48 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 22:36:48 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-23 22:36:48 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-23 22:36:49 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8081"]
+2022-10-23 22:36:49 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-23 22:36:49 INFO com.yecheng.log_manager.LogManagerApplication:87 Started LogManagerApplication in 8.455 seconds (JVM running for 9.146)
+2022-10-23 22:36:49 INFO c.y.l.Mybatis.SqlSessionFactory.SqlSessionBuilder:30 sqlsession start
+2022-10-23 22:36:49 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:45 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-23 22:36:49 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-23 22:36:49 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-23 22:36:49 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:66 found service number is 1, serviceName:mysql
+2022-10-23 22:36:49 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:72 choose service host:120.78.165.96, port:3306
+2022-10-23 22:36:49 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:94 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+2022-10-23 22:36:50 INFO com.yecheng.log_manager.Util.Init:28 start file listener
+2022-10-23 22:44:21 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 22:44:21 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
+2022-10-23 22:44:21 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:10911] result: true
+2022-10-23 22:44:21 INFO RocketmqRemoting:95 closeChannel: close the connection to remote address[120.78.165.96:9876] result: true
