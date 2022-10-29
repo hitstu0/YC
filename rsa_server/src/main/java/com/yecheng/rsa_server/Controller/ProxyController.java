@@ -29,7 +29,7 @@ import com.yecheng.rsa_server.Service.RsaService;
 
 @Controller
 public class ProxyController {
-    private String targetAddr = "http://120.78.165.96:80";
+    private String targetAddr = "http://120.78.165.96:81";
 
     @Autowired
     private RsaService rsaService;
@@ -68,7 +68,6 @@ public class ProxyController {
 
         //加密数据
         rsaService.doEncryption(request.getInputStream(), con.getOutputStream());
-        
         
         //执行远程调用
         int responseCode = con.getResponseCode();

@@ -71,7 +71,7 @@ public class RsaService {
            System.out.println(c.getBytes().length);
            return c;
         } catch (Exception e) {
-            logger.error("do encryption fail");
+            logger.error("do encryption fail:" + e.getMessage());
             return null;
         }
         
