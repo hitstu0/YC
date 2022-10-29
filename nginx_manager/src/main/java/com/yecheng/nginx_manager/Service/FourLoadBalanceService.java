@@ -48,7 +48,7 @@ public class FourLoadBalanceService {
         result.append("stream {\n");
         result.append("upstream nginx {\n");
         result.append(upstream.toString());
-        result.append("}\nserver {\nlisten 81;\n proxy_pass nginx; proxy_set_header log-id $request_id;\n}\n}\n");
+        result.append("}\nserver {\nlisten 81;\n proxy_pass nginx;\n proxy_set_header log-id $request_id;\n}\n}\n");
 
         return CodeMsg.SuccessWithData(result.toString());
     }
