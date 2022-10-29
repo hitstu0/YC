@@ -95,7 +95,7 @@ public class SevenLoadBalanceService {
         builder.append("server_name " + host + ";\n");
 
         builder.append("location / {\n");
-        builder.append("proxy_pass http://" + serviceName + ";\n");
+        builder.append("proxy_pass http://" + serviceName + ";\nproxy_set_header log-id $request_id;\n");
 
         builder.append("}\n}\n");
 
