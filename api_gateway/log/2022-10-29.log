@@ -1,0 +1,38 @@
+2022-10-29 17:06:32 INFO org.hibernate.validator.internal.util.Version:21 HV000001: Hibernate Validator 6.1.7.Final
+2022-10-29 17:06:33 INFO com.yecheng.api_gateway.ApiGatewayApplication:648 No active profile set, falling back to default profiles: default
+2022-10-29 17:06:51 INFO org.hibernate.validator.internal.util.Version:21 HV000001: Hibernate Validator 6.1.7.Final
+2022-10-29 17:06:51 INFO com.yecheng.api_gateway.ApiGatewayApplication:648 No active profile set, falling back to default profiles: default
+2022-10-29 17:07:16 INFO org.hibernate.validator.internal.util.Version:21 HV000001: Hibernate Validator 6.1.7.Final
+2022-10-29 17:07:16 INFO com.yecheng.api_gateway.ApiGatewayApplication:648 No active profile set, falling back to default profiles: default
+2022-10-29 17:07:17 INFO c.y.a.Service.MysqlRouteDefinitionRepository:82 begin getRouteDefinition From mysql, service name is: test
+2022-10-29 17:07:17 INFO c.y.a.Mybatis.SqlSessionFactory.SqlSessionBuilder:33 begin init mysql source
+2022-10-29 17:07:17 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:49 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-29 17:07:17 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-29 17:07:18 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-29 17:07:18 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:70 found service number is 1, serviceName:mysql
+2022-10-29 17:07:18 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:76 choose service host:120.78.165.96, port:3306
+2022-10-29 17:07:18 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:98 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true&autoReconnectForPools=true
+2022-10-29 17:07:19 INFO c.y.a.Mybatis.Service.RouteDefinitionDataDBService:54 begin create RouteDefinition, serviceName:test, path:Path=/ping
+2022-10-29 17:07:19 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 17:07:19 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 17:07:19 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 17:07:19 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 17:07:20 INFO com.yecheng.api_gateway.ApiGatewayApplication:61 Started ApiGatewayApplication in 5.07 seconds (JVM running for 5.589)
+2022-10-29 17:07:41 INFO c.y.a.Service.MysqlRouteDefinitionRepository:82 begin getRouteDefinition From mysql, service name is: test
+2022-10-29 17:07:42 INFO c.y.a.Mybatis.Service.RouteDefinitionDataDBService:54 begin create RouteDefinition, serviceName:test, path:Path=/ping
+2022-10-29 17:20:37 INFO org.hibernate.validator.internal.util.Version:21 HV000001: Hibernate Validator 6.1.7.Final
+2022-10-29 17:20:37 INFO com.yecheng.api_gateway.ApiGatewayApplication:648 No active profile set, falling back to default profiles: default
+2022-10-29 17:20:38 INFO c.y.a.Service.MysqlRouteDefinitionRepository:82 begin getRouteDefinition From mysql, service name is: test
+2022-10-29 17:20:38 INFO c.y.a.Mybatis.SqlSessionFactory.SqlSessionBuilder:33 begin init mysql source
+2022-10-29 17:20:38 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:49 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-29 17:20:38 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-29 17:20:39 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-29 17:20:39 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:70 found service number is 1, serviceName:mysql
+2022-10-29 17:20:39 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:76 choose service host:120.78.165.96, port:3306
+2022-10-29 17:20:39 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:98 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true&autoReconnectForPools=true
+2022-10-29 17:20:40 INFO c.y.a.Mybatis.Service.RouteDefinitionDataDBService:54 begin create RouteDefinition, serviceName:test, path:Path=/ping
+2022-10-29 17:20:40 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 17:20:40 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 17:20:40 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 17:20:40 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 17:20:41 INFO com.yecheng.api_gateway.ApiGatewayApplication:61 Started ApiGatewayApplication in 4.728 seconds (JVM running for 5.219)
