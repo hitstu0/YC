@@ -36,12 +36,12 @@ public class RouteDefinitionDataDBService {
             //初始化mapper
             sqlSession = sqlSessionBuilder.getSqlSession();
             RouteDefinitionMapper mapper = sqlSession.getMapper(RouteDefinitionMapper.class);
-            
             //读取数据库
             int hash = serviceName.hashCode();
             List<RouteDefinitionData> datas = mapper.getRouteDefinitions(hash);
             return datas;
         } catch (Exception e) {
+            e.printStackTrace();
             throw e;
         } finally {
             if (sqlSession != null) sqlSession.close();
@@ -61,6 +61,7 @@ public class RouteDefinitionDataDBService {
            RouteDefinitionMapper mapper = sqlSession.getMapper(RouteDefinitionMapper.class);
 
            mapper.setRouteDefinition(dbData);
+           sqlSession.commit();
         } finally {
            if(sqlSession != null) {
                sqlSession.close();

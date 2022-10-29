@@ -33,7 +33,6 @@ public class ManagerController {
     public CodeMsg<List<RouteDefinitionData>> getAllAPIFromServiceName(
         @RequestParam(name = "service_name") String serviceName ) {
        logger.info("begin get api from service name: {}", serviceName);
-
        return CodeMsg.SuccessWithData(dbService.getRouteDefinitionDatas(serviceName));
     }
     
