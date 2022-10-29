@@ -1,0 +1,153 @@
+2022-10-29 15:45:20 INFO com.yecheng.nginx_manager.NginxManagerApplication:659 No active profile set, falling back to default profiles: default
+2022-10-29 15:45:22 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:45:22 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-29 15:45:22 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-29 15:45:22 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-29 15:45:22 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-29 15:45:23 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:45:23 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:45:23 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:45:23 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:45:24 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:45:24 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-29 15:45:25 INFO com.yecheng.nginx_manager.NginxManagerApplication:59 Started NginxManagerApplication in 6.404 seconds (JVM running for 8.387)
+2022-10-29 15:45:25 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:49 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-29 15:45:25 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-29 15:45:25 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-29 15:45:25 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:70 found service number is 1, serviceName:mysql
+2022-10-29 15:45:25 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:76 choose service host:120.78.165.96, port:3306
+2022-10-29 15:45:25 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:98 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true&autoReconnectForPools=true
+2022-10-29 15:46:40 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring FrameworkServlet 'dispatcherServlet'
+2022-10-29 15:46:41 INFO c.y.nginx_manager.Controller.ManagerController:45 begin add api, service is:test, path is:Path=/ping
+2022-10-29 15:47:11 INFO com.yecheng.nginx_manager.NginxManagerApplication:659 No active profile set, falling back to default profiles: default
+2022-10-29 15:47:12 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:47:12 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-29 15:47:12 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-29 15:47:12 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-29 15:47:12 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-29 15:47:13 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:47:13 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:47:13 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:47:13 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:47:14 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:47:14 ERROR org.apache.catalina.core.StandardService:182 Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:256)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.yecheng.nginx_manager.NginxManagerApplication.main(NginxManagerApplication.java:16)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:438)
+	at sun.nio.ch.Net.bind(Net.java:430)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1150)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018)
+	... 14 common frames omitted
+2022-10-29 15:47:14 INFO org.apache.coyote.http11.Http11NioProtocol:180 Pausing ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:47:14 INFO org.apache.catalina.core.StandardService:180 Stopping service [Tomcat]
+2022-10-29 15:47:14 INFO org.apache.catalina.util.LifecycleBase:180 The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2022-10-29 15:47:14 INFO org.apache.coyote.http11.Http11NioProtocol:180 Stopping ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:47:14 INFO org.apache.coyote.http11.Http11NioProtocol:180 Destroying ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:48:27 INFO com.yecheng.nginx_manager.NginxManagerApplication:659 No active profile set, falling back to default profiles: default
+2022-10-29 15:48:29 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8081"]
+2022-10-29 15:48:29 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-29 15:48:29 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-29 15:48:29 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-29 15:48:29 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-29 15:48:30 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:48:30 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:48:30 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:48:30 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:48:31 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8081"]
+2022-10-29 15:48:31 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-29 15:48:31 INFO com.yecheng.nginx_manager.NginxManagerApplication:59 Started NginxManagerApplication in 5.979 seconds (JVM running for 6.737)
+2022-10-29 15:48:31 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:49 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-29 15:48:31 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-29 15:48:31 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-29 15:48:31 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:70 found service number is 1, serviceName:mysql
+2022-10-29 15:48:31 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:76 choose service host:120.78.165.96, port:3306
+2022-10-29 15:48:31 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:98 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true&autoReconnectForPools=true
+2022-10-29 15:48:39 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring FrameworkServlet 'dispatcherServlet'
+2022-10-29 15:48:39 INFO c.y.nginx_manager.Controller.ManagerController:45 begin add api, service is:test, path is:Path=/ping
+2022-10-29 15:49:11 INFO com.yecheng.nginx_manager.NginxManagerApplication:659 No active profile set, falling back to default profiles: default
+2022-10-29 15:49:12 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8081"]
+2022-10-29 15:49:12 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-29 15:49:12 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-29 15:49:12 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-29 15:49:12 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-29 15:49:13 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:49:13 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:49:13 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:49:13 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:49:13 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8081"]
+2022-10-29 15:49:13 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-29 15:49:14 INFO com.yecheng.nginx_manager.NginxManagerApplication:59 Started NginxManagerApplication in 3.826 seconds (JVM running for 4.659)
+2022-10-29 15:49:14 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:49 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-29 15:49:14 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-29 15:49:14 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-29 15:49:14 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:70 found service number is 1, serviceName:mysql
+2022-10-29 15:49:14 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:76 choose service host:120.78.165.96, port:3306
+2022-10-29 15:49:14 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:98 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true&autoReconnectForPools=true
+2022-10-29 15:49:20 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring FrameworkServlet 'dispatcherServlet'
+2022-10-29 15:49:20 INFO c.y.nginx_manager.Controller.ManagerController:45 begin add api, service is:test, path is:Path=/ping
+2022-10-29 15:49:40 INFO com.yecheng.nginx_manager.NginxManagerApplication:659 No active profile set, falling back to default profiles: default
+2022-10-29 15:49:41 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8081"]
+2022-10-29 15:49:41 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-29 15:49:41 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-29 15:49:41 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-29 15:49:41 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-29 15:49:43 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:49:43 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:49:43 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:49:43 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:49:44 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8081"]
+2022-10-29 15:49:44 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-29 15:49:44 INFO com.yecheng.nginx_manager.NginxManagerApplication:59 Started NginxManagerApplication in 4.915 seconds (JVM running for 5.569)
+2022-10-29 15:49:44 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:49 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-29 15:49:44 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-29 15:49:44 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-29 15:49:44 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:70 found service number is 1, serviceName:mysql
+2022-10-29 15:49:44 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:76 choose service host:120.78.165.96, port:3306
+2022-10-29 15:49:44 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:98 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true&autoReconnectForPools=true
+2022-10-29 15:49:47 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring FrameworkServlet 'dispatcherServlet'
+2022-10-29 15:49:47 INFO c.y.nginx_manager.Controller.ManagerController:46 begin add api, service is:test, path is:Path=/ping
+2022-10-29 15:50:42 INFO com.yecheng.nginx_manager.NginxManagerApplication:659 No active profile set, falling back to default profiles: default
+2022-10-29 15:50:44 INFO org.apache.coyote.http11.Http11NioProtocol:180 Initializing ProtocolHandler ["http-nio-8081"]
+2022-10-29 15:50:44 INFO org.apache.catalina.core.StandardService:180 Starting service [Tomcat]
+2022-10-29 15:50:44 INFO org.apache.catalina.core.StandardEngine:180 Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-10-29 15:50:44 INFO org.apache.catalina.core.AprLifecycleListener:180 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-10-29 15:50:44 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring embedded WebApplicationContext
+2022-10-29 15:50:46 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:50:46 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:50:46 WARN com.netflix.config.sources.URLConfigurationSource:121 No URLs will be polled as dynamic configuration sources.
+2022-10-29 15:50:46 INFO com.netflix.config.sources.URLConfigurationSource:122 To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-29 15:50:47 INFO org.apache.coyote.http11.Http11NioProtocol:180 Starting ProtocolHandler ["http-nio-8081"]
+2022-10-29 15:50:47 INFO org.apache.tomcat.util.net.NioSelectorPool:180 Using a shared selector for servlet write/read
+2022-10-29 15:50:47 INFO com.yecheng.nginx_manager.NginxManagerApplication:59 Started NginxManagerApplication in 6.657 seconds (JVM running for 7.353)
+2022-10-29 15:50:47 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:49 begin init sqlSessionPool, serviceName:null, dataBase:myDatas, userName:null
+2022-10-29 15:50:47 INFO com.yecheng.ymysql.Discover.DiscoverService:18 begin get service list, name is mysql
+2022-10-29 15:50:47 INFO com.yecheng.ymysql.Discover.DiscoverService:21 get service: mysql number is 1
+2022-10-29 15:50:47 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:70 found service number is 1, serviceName:mysql
+2022-10-29 15:50:47 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:76 choose service host:120.78.165.96, port:3306
+2022-10-29 15:50:47 INFO com.yecheng.ymysql.DataSource.SqlSessionPool:98 datasource url is: jdbc:mysql://120.78.165.96:3306/myDatas?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true&autoReconnectForPools=true
+2022-10-29 15:50:49 INFO o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 Initializing Spring FrameworkServlet 'dispatcherServlet'
+2022-10-29 15:50:49 INFO c.y.nginx_manager.Controller.ManagerController:44 begin add api, service is:test, path is:Path=/ping
+2022-10-29 15:50:49 INFO c.y.n.Service.RouteDefinitionDataDBService:57 tesr
