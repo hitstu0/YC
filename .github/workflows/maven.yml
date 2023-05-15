@@ -1,16 +1,12 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
-name: Build and Release
+name: Build and Package
 
 on:
   push:
     branches:
       - master
-    tags:
-      - '*'
 
 jobs:
-  build-and-release:
+  build-and-package:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -18,40 +14,15 @@ jobs:
           - log_client
           - log_manager
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
     - name: Set up JDK 8
       uses: actions/setup-java@v1
       with:
         java-version: '8'
     - name: Build with Maven
-      run: |
-          cd ${{ matrix.project }}
-          mvn clean package
-    - name: Get project version
-      id: get_version
-      run: |
-        cd ${{ matrix.project }}
-        echo "::set-output name=version::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)"
-      shell: bash
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ matrix.project }}-${{ steps.get_version.outputs.version }}
-        release_name: ${{ matrix.project }} ${{ steps.get_version.outputs.version }}
-        draft: false
-        prerelease: false
+      run: mvn -f ${{ matrix.project }}/pom.xml clean package
     - name: Upload JAR
-      id: upload-release-asset
-      uses: actions/upload-release-asset@v1.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: actions/upload-artifact@v2
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ${{ matrix.project }}/target/*.jar
-        asset_name: ${{ matrix.project }}-${{ steps.get_version.outputs.version }}.jar
-        asset_content_type: application/java-archive
+        name: ${{ matrix.project }}
+        path: ${{ matrix.project }}/target/*.jar
 
