@@ -26,6 +26,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: '8'
+    - name: Checkout code
+      uses: actions/checkout@v2
     - name: List files in directory
       run: ls -al
     - name: Build with Maven
