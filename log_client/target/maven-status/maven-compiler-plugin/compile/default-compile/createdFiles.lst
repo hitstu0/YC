@@ -1,8 +1,0 @@
-com\yecheng\log_manager\Service\RmqService.class
-com\yecheng\log_manager\LogManagerApplication.class
-com\yecheng\log_manager\Service\FileService.class
-com\yecheng\log_manager\Data\Producer.class
-com\yecheng\log_manager\Util\Init.class
-com\yecheng\log_manager\Data\LogData.class
-com\yecheng\log_manager\Util\FileListener.class
-com\yecheng\log_manager\Service\LoggerService.class
