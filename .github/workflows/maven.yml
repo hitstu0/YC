@@ -32,14 +32,26 @@ jobs:
       id: get_version
       run: |
         cd ${{ matrix.project }}
-        mvn help:evaluate -Dexec.executable=echo -Dexec.args='${project.version}' -q -DforceStdout=true
+        echo "::set-output name=version::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)"
       shell: bash
-    - uses: "marvinpinto/action-automatic-releases@latest"
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
       with:
-        repo_token: "${{ secrets.TOKEN }}"
-        automatic_release_tag: ${{ steps.get_version.outputs.version }}
+        tag_name: ${{ matrix.project }}-${{ steps.get_version.outputs.version }}
+        release_name: ${{ matrix.project }} ${{ steps.get_version.outputs.version }}
+        draft: false
         prerelease: false
-        title: ${{ matrix.project }} ${{ steps.get_version.outputs.version }}
-        files: |
-         ${{ matrix.project }}/target/*.jar
+    - name: Upload JAR
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ${{ matrix.project }}/target/*.jar
+        asset_name: ${{ matrix.project }}-${{ steps.get_version.outputs.version }}.jar
+        asset_content_type: application/java-archive
 
