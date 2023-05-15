@@ -2,8 +2,8 @@ name: Build and Package
 
 on:
   push:
-    tags:
-      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
+    branches:
+    - master
 
 jobs:
   build-and-package:
@@ -14,6 +14,7 @@ jobs:
           - log_client
           - log_manager
     steps:
+    
     - name: Set up JDK 8
       uses: actions/setup-java@v1
       with:
@@ -23,33 +24,20 @@ jobs:
     - name: Build with Maven
       run: mvn -f ${{ matrix.project }}/pom.xml clean package
       
-    - name: 创建GitHub Release
-      id: create_release
-      uses: actions/create-release@latest
-      env:
-        # 配置github token （这个无需去github配置，默认存在的）
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # 将打包好的 Jar 包 放到 staging 文件夹
+    - run: mkdir staging && cp ${{ matrix.project }}/target/*.jar staging
+   
+    - name: Set Release version env variable
+      run: |
+        cd ${{ matrix.project }}
+        echo "RELEASE_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
+    - uses: "marvinpinto/action-automatic-releases@latest"
       with:
-        	# 标签名
-          tag_name:  ${{ github.ref }}
-          # release名
-          release_name:  ${{ matrix.project }}-${{ github.ref }}
-          # 是否为草稿
-          draft: false
-          # 是否为预发布
-          prerelease: false
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "${{ env.RELEASE_VERSION }}"
+        prerelease: false
+        title: "${{ matrix.project }} ${{ env.RELEASE_VERSION }}"
+        files: |
+          staging/*.jar
 
-			# 上传Release Asset
-    - name: 上传Release Asset
-      id: upload-release-asset
-      uses: actions/upload-release-asset@v1
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        	# 上传URL为创建GitHub Release步骤的输出值，可通过配置的id获取
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          # 上传文件信息
-          asset_path: ${{ matrix.project }}/target/*.jar
-          asset_name: ${{ matrix.project }}-${{ github.ref }}
-          asset_content_type: application/jar
 
