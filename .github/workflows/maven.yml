@@ -35,9 +35,9 @@ jobs:
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "${{ env.RELEASE_VERSION }}"
+        automatic_release_tag: "${{ matrix.project }}-${{ env.RELEASE_VERSION }}"
         prerelease: false
-        title: "${{ matrix.project }} ${{ env.RELEASE_VERSION }}"
+        title: "${{ matrix.project }}-${{ env.RELEASE_VERSION }}"
         files: |
           staging/*.jar
 
