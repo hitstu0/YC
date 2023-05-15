@@ -22,14 +22,14 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: '8'
-    - name: CD
-      id: cd
-      run: cd ${{ matrix.project }}
     - name: Build with Maven
-      run: mvn clean package
+      run: |
+          cd ${{ matrix.project }}
+          mvn clean package
     - name: Get project version
       id: get_version
       run: |
+        cd ${{ matrix.project }}
         echo "RELEASE_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
@@ -38,5 +38,5 @@ jobs:
         prerelease: false
         title: "${{ matrix.project }} ${{ env.RELEASE_VERSION }}"
         files: |
-         target/*.jar
+         ${{ matrix.project }}/target/*.jar
 
