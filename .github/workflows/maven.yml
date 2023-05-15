@@ -11,7 +11,7 @@ name: Build and Package
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-package:
