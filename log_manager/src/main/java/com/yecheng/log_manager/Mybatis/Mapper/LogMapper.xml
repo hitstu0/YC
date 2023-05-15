@@ -54,11 +54,11 @@
       create table if not exists log
       (
          id int not null primary key auto_increment,  
-         logTime bigint not null,
+         log_time bigint not null,
          level varchar(20) not null,
          logger varchar(100) not null,
          line varchar(800) not null,
-         logId varchar(100) not null,
+         log_id varchar(100) not null,
          data varchar(800) not null
       );
    </update>
