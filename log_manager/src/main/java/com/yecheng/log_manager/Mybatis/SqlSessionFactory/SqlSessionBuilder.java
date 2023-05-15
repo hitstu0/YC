@@ -35,12 +35,15 @@ public class SqlSessionBuilder implements CommandLineRunner{
         addMapper();
 
         factory = sqlSessionPool.getSqlSessionFactory();
-        
-        SqlSession sqlSession = getSqlSession();
-        LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
-        logMapper.createTable();
-        sqlSession.commit();
-        sqlSession.close();
+        try {
+            SqlSession sqlSession = getSqlSession();
+            LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
+            logMapper.createTable();
+            sqlSession.commit();
+            sqlSession.close();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void addMapper() {
