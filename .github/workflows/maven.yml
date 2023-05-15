@@ -2,8 +2,8 @@ name: Build and Package
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
   build-and-package:
@@ -22,6 +22,34 @@ jobs:
       uses: actions/checkout@v2
     - name: Build with Maven
       run: mvn -f ${{ matrix.project }}/pom.xml clean package
-    - name: Upload JAR
-      run: git push origin master
+      
+    - name: 创建GitHub Release
+      id: create_release
+      uses: actions/create-release@latest
+      env:
+        # 配置github token （这个无需去github配置，默认存在的）
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        	# 标签名
+          tag_name:  ${{ github.ref }}
+          # release名
+          release_name:  ${{ matrix.project }}-${{ github.ref }}
+          # 是否为草稿
+          draft: false
+          # 是否为预发布
+          prerelease: false
+
+			# 上传Release Asset
+    - name: 上传Release Asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        	# 上传URL为创建GitHub Release步骤的输出值，可通过配置的id获取
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          # 上传文件信息
+          asset_path: ${{ matrix.project }}/target/*.jar
+          asset_name: ${{ matrix.project }}-${{ github.ref }}
+          asset_content_type: application/jar
 
