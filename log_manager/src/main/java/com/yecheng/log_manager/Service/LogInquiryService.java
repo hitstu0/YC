@@ -28,28 +28,14 @@ public class LogInquiryService {
         try {
            sqlSession = builder.getSqlSession();
            LogMapper mapper = sqlSession.getMapper(LogMapper.class);
-
-           //没指定Logger则判断是否使用前缀扫描
-           if(data.getLogger().equals("")) {
-              if (data.isUsePre()) {
-                return mapper.getLogFromPre(data);
-              } else {
-                return null;
-              }
+           List<LogData> result = null;
+           if(data.isUsePre()) {
+             result = mapper.getLogFromLoggerAndPre(data);
            } else {
-              //使用LogId
-              if (data.getLogId() != "" ) {
-                return mapper.getLogFromLogId(data);
-              }
-
-              //使用时间
-              if (data.getBeginTime() != 0 && data.getEndTime() != 0) {
-                return mapper.getLogFromTime(data);
-              }
-
-              //使用logger
-              return mapper.getLogFromLogger(data);
+             result = mapper.getLogFromLogger(data);
            }
+
+           return result;
         } finally {
             if (sqlSession != null) {
                 sqlSession.close();
@@ -82,23 +68,12 @@ public class LogInquiryService {
         try {
            sqlSession = builder.getSqlSession();
            LogMapper mapper = sqlSession.getMapper(LogMapper.class);
-
            List<LogData> link = mapper.getLogLink(logId);
-           link.sort(new LogLinkComparator());
-
            return link;
         } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }
-        }
-    }
-
-    class LogLinkComparator implements Comparator<LogData> {
-
-        @Override
-        public int compare(LogData o1, LogData o2) {
-            return (int)(o1.getLogTime() - o2.getLogTime());
         }
     }
 }

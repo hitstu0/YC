@@ -21,7 +21,13 @@ public class LogInquiryController {
     @Autowired
     private LogInquiryService logInquiryService;
     
-    @GetMapping
+    @GetMapping("/test")
+    @ResponseBody
+    public String test() {
+        return "YOU LOG SERVCE ACESS OK";
+    }
+
+    @GetMapping("/log")
     @ResponseBody
     public String getLog(@RequestBody LogRequestData data) {
         List<LogData> datas = logInquiryService.getLog(data);

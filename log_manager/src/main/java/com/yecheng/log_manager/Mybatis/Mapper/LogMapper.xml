@@ -9,47 +9,28 @@
          values(#{logTime}, #{level}, #{logger}, #{line}, #{logId}, #{data})
     </insert>
 
-    <select id="getLogFromLogId" parameterType="req" resultType="log">
-         select log_time, level, logger, line, log_id, data
-         from (
-            select log_time, level, logger, line, log_id, data
-            from log
-            where log_id = #{logId}
-         ) as t
-         where t.data like CONCAT('%', #{data}, '%')
-    </select>
-
-    <select id="getLogFromTime" parameterType="req" resultType="log">
+   <select id="getLogFromLoggerAndPre" parameterType="req" resultType="log">
       select log_time, level, logger, line, log_id, data
-      from (
-         select log_time, level, logger, line, log_id, data
-         from log
-         where log_time &gt;= #{beginTime} and log_time &lt;= #{endTime}
-      ) as t
-      where t.data like CONCAT('%', #{data}, '%')
+      from log
+      where logger = #{logger} and data like CONCAT(#{data}, '%') and log_time &gl; ${beginTime} and log_time &lt; ${endTime}
+      order by log_time
    </select>
 
    <select id="getLogFromLogger" parameterType="req" resultType="log">
-    select log_time, level, logger, line, log_id, data
-    from (
-       select log_time, level, logger, line, log_id, data
-       from log
-       where logger = #{logger}
-    ) as t
-    where t.data like CONCAT('%', #{data}, '%')
+      select log_time, level, logger, line, log_id, data
+      from log
+      where logger = #{logger} and data like CONCAT('%', #{data}, '%') and log_time &gl; ${beginTime} and log_time &lt; ${endTime}
+      order by log_time
    </select>
 
-   <select id="getLogFromPre" parameterType="req" resultType="log">
-    select log_time, level, logger, line, log_id, data
-    from log
-    where data like CONCAT(#{data}, '%')
-   </select>
 
    <select id="getLogLink" parameterType="String" resultType="log">
       select log_time, level, logger, line, log_id, data
       from log
       where log_id = #{logId}
+      order by log_time
    </select>
+
    <update id="createTable">
       create table if not exists log
       (
@@ -57,7 +38,7 @@
          log_time bigint not null,
          level varchar(20) not null,
          logger varchar(100) not null,
-         line varchar(800) not null,
+         line int not null,
          log_id varchar(100) not null,
          data varchar(800) not null
       );

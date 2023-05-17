@@ -10,10 +10,8 @@ public interface LogMapper {
     void createTable();
     void saveLog(LogData log);
 
-    List<LogData> getLogFromLogId(LogRequestData data);
-    List<LogData> getLogFromTime(LogRequestData data);
+    List<LogData> getLogFromLoggerAndPre(LogRequestData data);
     List<LogData> getLogFromLogger(LogRequestData data);
-    List<LogData> getLogFromPre(LogRequestData data);
     List<LogData> getLogLink(String logId);
     
 }
