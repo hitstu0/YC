@@ -34,7 +34,7 @@ public class LogInquiryController {
         return logInquiryService.spliceLog(datas);
     }
 
-    @GetMapping
+    @GetMapping("/link")
     @ResponseBody
     public String getLink(@RequestParam(name = "logId") String logId ) {
         List<LogData> datas = logInquiryService.getLogLink(logId);
