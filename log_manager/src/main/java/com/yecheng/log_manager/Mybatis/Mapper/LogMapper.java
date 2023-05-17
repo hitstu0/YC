@@ -11,6 +11,7 @@ public interface LogMapper {
     void saveLog(LogData log);
 
     List<LogData> getLogFromLoggerAndPre(LogRequestData data);
+    
     List<LogData> getLogFromLogger(LogRequestData data);
     List<LogData> getLogLink(String logId);
     

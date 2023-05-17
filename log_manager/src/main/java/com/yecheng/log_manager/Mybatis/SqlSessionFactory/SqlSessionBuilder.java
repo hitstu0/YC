@@ -41,8 +41,9 @@ public class SqlSessionBuilder implements CommandLineRunner{
             logMapper.createTable();
             sqlSession.commit();
             sqlSession.close();
+            logger.info("ini success");
         } catch(Exception e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
     }
 

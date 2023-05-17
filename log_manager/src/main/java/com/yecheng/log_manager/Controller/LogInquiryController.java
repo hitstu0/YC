@@ -20,21 +20,21 @@ public class LogInquiryController {
 
     @Autowired
     private LogInquiryService logInquiryService;
-    
+
     @GetMapping("/test")
     @ResponseBody
     public String test() {
         return "YOU LOG SERVCE ACESS OK";
     }
 
-    @GetMapping("/log")
+    @GetMapping
     @ResponseBody
     public String getLog(@RequestBody LogRequestData data) {
         List<LogData> datas = logInquiryService.getLog(data);
         return logInquiryService.spliceLog(datas);
     }
 
-    @GetMapping("/link")
+    @GetMapping
     @ResponseBody
     public String getLink(@RequestParam(name = "logId") String logId ) {
         List<LogData> datas = logInquiryService.getLogLink(logId);
