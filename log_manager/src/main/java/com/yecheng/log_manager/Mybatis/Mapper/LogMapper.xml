@@ -12,14 +12,14 @@
    <select id="getLogFromLoggerAndPre" parameterType="req" resultType="log">
       select log_time, level, logger, line, log_id, data
       from log
-      where logger = #{logger} and data like CONCAT(#{data}, '%') and log_time &gl; ${beginTime} and log_time &lt; ${endTime}
+      where logger = #{logger} and data like CONCAT(#{data}, '%') and log_time &gt; ${beginTime} and log_time &lt; ${endTime}
       order by log_time
    </select>
 
    <select id="getLogFromLogger" parameterType="req" resultType="log">
       select log_time, level, logger, line, log_id, data
       from log
-      where logger = #{logger} and data like CONCAT('%', #{data}, '%') and log_time &gl; ${beginTime} and log_time &lt; ${endTime}
+      where logger = #{logger} and data like CONCAT('%', #{data}, '%') and log_time &gt; ${beginTime} and log_time &lt; ${endTime}
       order by log_time
    </select>
 
