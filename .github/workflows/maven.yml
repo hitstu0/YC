@@ -13,6 +13,7 @@ jobs:
         project:
           - log_client
           - log_manager
+          - api_gateway
     steps:
     
     - name: Set up JDK 8
