@@ -32,7 +32,7 @@
 
   <!-- getAllRouteDefinitions --> 
 
-  <select id="getAllRouteDefinitions">
+  <select id="getAllRouteDefinitions" resultType="RouteDefinition">
       select id, service_name, path
       from RouteDefinition
   </select>
