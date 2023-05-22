@@ -2,10 +2,8 @@ package com.yecheng.api_gateway.Mybatis.SqlSessionFactory;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.hibernate.validator.internal.util.logging.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Component;
 
@@ -38,6 +36,16 @@ public class SqlSessionBuilder {
         addMapper();
 
         factory = sqlSessionPool.getSqlSessionFactory();
+
+        try {
+            SqlSession sqlSession = getSqlSession();
+            RouteDefinitionMapper mapper = sqlSession.getMapper(RouteDefinitionMapper.class);
+            mapper.createTable();
+            sqlSession.commit();
+            sqlSession.close();
+        } catch(Exception e) {
+            logger.error(e.getMessage());
+        }
     }
 
     private void addMapper() {

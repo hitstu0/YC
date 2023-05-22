@@ -9,4 +9,24 @@
         where service_hash = #{serviceHash}
     </select>
 
+    <insert id="setRouteDefinition" parameterType="RouteDefinitionDB">
+        insert into RouteDefinition(service_name, service_hash, path, path_hash)
+        values(#{serviceName}, #{serviceHash}, #{path}, #{pathHash})
+    </insert>
+
+    <delete id="deleteRouteDefinition">
+        delete from RouteDefinition
+        where path_hash = #{pathHash} and service_hash = #{serviceHash}
+    </delete>
+
+    <update id="createTable">
+      create table if not exists RouteDefinition
+      (
+        id int not null primary key auto_increment,  
+        service_name varchar(50) not null,
+        service_hash int not null,
+        path int not null,
+        path_hash varchar(50) not null
+      );
+   </update>
 </mapper>

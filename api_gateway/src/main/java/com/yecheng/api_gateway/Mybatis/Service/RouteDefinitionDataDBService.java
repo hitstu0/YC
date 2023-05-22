@@ -74,5 +74,40 @@ public class RouteDefinitionDataDBService {
 
         return definitions;
     }
+    
+    public CodeMsg<String> setRouteDefinitionData(String serviceName, String path) {
+        RouteDefinitionDBData dbData = new RouteDefinitionDBData();
+        dbData.setServiceName(serviceName);
+        dbData.setPath(path);
+        dbData.setServiceHash(serviceName.hashCode());
+        dbData.setPathHash(path.hashCode());
 
+        SqlSession sqlSession = null;
+        try {
+           sqlSession = sqlSessionBuilder.getSqlSession();
+           RouteDefinitionMapper mapper = sqlSession.getMapper(RouteDefinitionMapper.class);
+
+           mapper.setRouteDefinition(dbData);
+        } finally {
+           if(sqlSession != null) {
+               sqlSession.close();
+           }
+        }
+        return CodeMsg.Success;
+   }
+
+   public CodeMsg<String> deleteRouteDefinition(String serviceName, String path) {
+       SqlSession sqlSession = null;
+        try {
+           sqlSession = sqlSessionBuilder.getSqlSession();
+           RouteDefinitionMapper mapper = sqlSession.getMapper(RouteDefinitionMapper.class);
+
+           mapper.deleteRouteDefinition(path.hashCode(), serviceName.hashCode());
+        } finally {
+           if(sqlSession != null) {
+               sqlSession.close();
+           }
+        }
+        return CodeMsg.Success;
+   }
 }
