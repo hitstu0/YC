@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.http.client.ClientHttpResponse;
@@ -29,7 +30,12 @@ import com.yecheng.rsa_server.Service.RsaService;
 
 @Controller
 public class ProxyController {
-    private String targetAddr = "http://127.0.0.1:8083";
+
+    @Value("${target_ip}")
+    private String targetIp;
+
+    @Value("${target_port}")
+    private String port;
 
     @Autowired
     private RsaService rsaService;
@@ -37,6 +43,7 @@ public class ProxyController {
     @RequestMapping(value = "/proxy/**")
     @ResponseBody
     public String doProxy(HttpServletRequest request, HttpServletResponse response) throws IOException, URISyntaxException {
+        String targetAddr = targetIp + ":" + port;
         //创建请求URL
         URI uri = new URI(request.getRequestURI());
         String path = uri.getPath();

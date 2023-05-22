@@ -25,25 +25,6 @@ public class RsaService {
     
     //解密使用自己私钥
     public String doDecryption(InputStream input) throws IOException {
-    /*   BufferedInputStream reader = new BufferedInputStream(input);
-        String c = "";
-        byte[] b = new byte[1024];
-        int len = -1;
-        int sum = 0;
-        ByteBuffer bytebuf = ByteBuffer.allocate(2048);
-        while((len = reader.read(b)) > 0) {
-            bytebuf.put(b);
-            sum += len;
-        }
-        
-        if(sum == 0) return "";
-
-        byte[] bytes = new byte[sum];
-        for (int i = 0; i < sum; ++ i) {
-            bytes[i] = bytebuf.get(i);
-        }
-        c = new String(bytes);
-        reader.close();*/
         //读取输入内容
         StringBuilder content = new StringBuilder();
         byte[] b = new byte[1024];
@@ -55,7 +36,7 @@ public class RsaService {
         if(c.length() == 0) return "";
 
         //读取私钥
-        BufferedReader keyReader = new BufferedReader(new FileReader("/Users/bytedance/serverKey.txt"));
+        BufferedReader keyReader = new BufferedReader(new FileReader("/root/code/docker_compose/client/privateKey.txt"));
         BigInteger n = new BigInteger(keyReader.readLine());
         keyReader.readLine();
         BigInteger privateKey = new BigInteger(keyReader.readLine());
@@ -79,7 +60,7 @@ public class RsaService {
         if(plaint.length() == 0) return;
 
         //读取公钥
-        BufferedReader reader = new BufferedReader(new FileReader("/Users/bytedance/myKey.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("/root/code/docker_compose/server/publicKey.txt"));
         BigInteger n = new BigInteger(reader.readLine());
         BigInteger publicKey = new BigInteger(reader.readLine());
         reader.close();
