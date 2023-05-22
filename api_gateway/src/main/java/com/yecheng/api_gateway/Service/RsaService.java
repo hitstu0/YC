@@ -28,7 +28,7 @@ public class RsaService {
     //解密使用自己私钥
     public String doDecryption(String data) {
         try {
-            BufferedReader keyReader = new BufferedReader(new FileReader("/root/code/docker_compose/server/privateKey.txt"));
+            BufferedReader keyReader = new BufferedReader(new FileReader("/root/code/docker_compose/rsa/server/privateKey.txt"));
             BigInteger n = new BigInteger(keyReader.readLine());
             keyReader.readLine();
             BigInteger privateKey = new BigInteger(keyReader.readLine());
@@ -48,7 +48,7 @@ public class RsaService {
 
         //读取公钥
         try {
-           BufferedReader reader = new BufferedReader(new FileReader("/root/code/docker_compose/client/publicKey.txt"));
+           BufferedReader reader = new BufferedReader(new FileReader("/root/code/docker_composer/rsa/client/publicKey.txt"));
            BigInteger n = new BigInteger(reader.readLine());
            BigInteger publicKey = new BigInteger(reader.readLine());
            reader.close();

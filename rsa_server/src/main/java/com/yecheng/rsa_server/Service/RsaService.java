@@ -36,7 +36,7 @@ public class RsaService {
         if(c.length() == 0) return "";
 
         //读取私钥
-        BufferedReader keyReader = new BufferedReader(new FileReader("/root/code/docker_compose/client/privateKey.txt"));
+        BufferedReader keyReader = new BufferedReader(new FileReader("/root/code/docker_compose/rsa/client/privateKey.txt"));
         BigInteger n = new BigInteger(keyReader.readLine());
         keyReader.readLine();
         BigInteger privateKey = new BigInteger(keyReader.readLine());
@@ -60,7 +60,7 @@ public class RsaService {
         if(plaint.length() == 0) return;
 
         //读取公钥
-        BufferedReader reader = new BufferedReader(new FileReader("/root/code/docker_compose/server/publicKey.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("/root/code/docker_compose/rsa/server/publicKey.txt"));
         BigInteger n = new BigInteger(reader.readLine());
         BigInteger publicKey = new BigInteger(reader.readLine());
         reader.close();
