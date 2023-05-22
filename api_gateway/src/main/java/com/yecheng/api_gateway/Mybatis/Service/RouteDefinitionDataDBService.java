@@ -28,7 +28,27 @@ public class RouteDefinitionDataDBService {
     @Autowired
     private SqlSessionBuilder sqlSessionBuilder;
     
-    public List<RouteDefinitionData> getRouteDefinitionDatas(String serviceName) {
+    public List<RouteDefinitionData> getRouteDefinitionDatasByServiceName(String name) {
+        sqlSessionBuilder.init();
+        
+        SqlSession sqlSession =  null;
+        try {
+            //初始化mapper
+            sqlSession = sqlSessionBuilder.getSqlSession();
+            RouteDefinitionMapper mapper = sqlSession.getMapper(RouteDefinitionMapper.class);
+            
+            int hash = name.hashCode();
+            //读取数据库
+            List<RouteDefinitionData> datas = mapper.getRouteDefinitionsByService(hash);
+            return datas;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            if (sqlSession != null) sqlSession.close();
+        }
+    }
+
+    public List<RouteDefinitionData> getRouteDefinitionDatas() {
         sqlSessionBuilder.init();
         
         SqlSession sqlSession =  null;
@@ -38,8 +58,7 @@ public class RouteDefinitionDataDBService {
             RouteDefinitionMapper mapper = sqlSession.getMapper(RouteDefinitionMapper.class);
             
             //读取数据库
-            int hash = serviceName.hashCode();
-            List<RouteDefinitionData> datas = mapper.getRouteDefinitions(hash);
+            List<RouteDefinitionData> datas = mapper.getAllRouteDefinitions();
             return datas;
         } catch (Exception e) {
             throw e;
@@ -48,9 +67,10 @@ public class RouteDefinitionDataDBService {
         }
     }
 
-    public List<RouteDefinition> changeToRouteDefinition(String serviceName, List<RouteDefinitionData> datas) {
+    public List<RouteDefinition> changeToRouteDefinition(List<RouteDefinitionData> datas) {
         List<RouteDefinition> definitions = new LinkedList<>();
         for(RouteDefinitionData data : datas) {
+            String serviceName = data.getName();
             logger.info("begin create RouteDefinition, serviceName:{}, path:{}", serviceName, data.getPath());
             
             RouteDefinition definition = new RouteDefinition();

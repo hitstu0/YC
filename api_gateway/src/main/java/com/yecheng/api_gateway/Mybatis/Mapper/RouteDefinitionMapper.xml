@@ -3,8 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yecheng.api_gateway.Mybatis.Mapper.RouteDefinitionMapper">
-    <select id="getRouteDefinitions" parameterType="Integer" resultType="RouteDefinition">
-        select id, path
+    <select id="getRouteDefinitionsByService" parameterType="Integer" resultType="RouteDefinition">
+        select id, service_name, path
         from RouteDefinition
         where service_hash = #{serviceHash}
     </select>
@@ -29,4 +29,11 @@
         path_hash varchar(50) not null
       );
    </update>
-</mapper>
+
+  <!-- getAllRouteDefinitions --> 
+
+  <select id="getAllRouteDefinitions">
+      select id, service_name, path
+      from RouteDefinition
+  </select>
+  </mapper>

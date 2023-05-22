@@ -32,7 +32,7 @@ public class ManagerController {
         @RequestParam(name = "service_name") String serviceName ) {
        logger.info("begin get api from service name: {}", serviceName);
 
-       return CodeMsg.SuccessWithData(dbService.getRouteDefinitionDatas(serviceName));
+       return CodeMsg.SuccessWithData(dbService.getRouteDefinitionDatasByServiceName(serviceName));
     }
     
     //新增

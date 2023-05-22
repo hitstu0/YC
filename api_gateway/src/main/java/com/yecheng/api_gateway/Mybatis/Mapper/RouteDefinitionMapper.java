@@ -9,7 +9,8 @@ import com.yecheng.api_gateway.Data.RouteDefinitionData;
 
 public interface RouteDefinitionMapper {
     void createTable();
-    List<RouteDefinitionData> getRouteDefinitions(int serviceHash);
+    List<RouteDefinitionData> getRouteDefinitionsByService(int serviceHash);
+    List<RouteDefinitionData> getAllRouteDefinitions();
     void setRouteDefinition(RouteDefinitionDBData dbData);
     void deleteRouteDefinition(@Param("pathHash") int pathHash, @Param("serviceHash") int serviceHash);
 }

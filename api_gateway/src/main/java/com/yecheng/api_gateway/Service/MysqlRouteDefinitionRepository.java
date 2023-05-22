@@ -36,10 +36,8 @@ import reactor.core.publisher.Mono;
 public class MysqlRouteDefinitionRepository implements RouteDefinitionRepository, ApplicationEventPublisherAware {
     private static Logger logger = LoggerFactory.getLogger(MysqlRouteDefinitionRepository.class);
     
-    //网关对应服务
-    @Value("${service_name}")
-    private String serviceName;
-    //该服务的路由路径
+
+    //所有路由路径
     private List<RouteDefinition> routeDefinitionList = new LinkedList<>();
     
     //工具类
@@ -79,10 +77,10 @@ public class MysqlRouteDefinitionRepository implements RouteDefinitionRepository
     }
 
     public void load() {
-        logger.info("begin getRouteDefinition From mysql, service name is: {}", serviceName);
+        logger.info("begin getRouteDefinition From mysql");
         
-        List<RouteDefinitionData> datas = dbService.getRouteDefinitionDatas(serviceName);
-        routeDefinitionList = dbService.changeToRouteDefinition(serviceName, datas);
+        List<RouteDefinitionData> datas = dbService.getRouteDefinitionDatas();
+        routeDefinitionList = dbService.changeToRouteDefinition(datas);
 
     }
 }
